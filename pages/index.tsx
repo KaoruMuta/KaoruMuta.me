@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import TwitterIcon from '../public/twitter.svg';
 import FacebookIcon from '../public/facebook.svg';
 import GitHubIcon from '../public/github.svg';
@@ -20,9 +21,15 @@ const Home: NextPage = () => {
           <span className='font-sans font-semibold text-6xl'>Kaoru Muta</span>
           <br></br>Application Engineer
           <div className='flex flex-row h-8 mt-8 gap-x-8'>
-            <TwitterIcon className='h-8 w-8' />
-            <FacebookIcon className='h-8 w-8' />
-            <GitHubIcon className='h-8 w-8' />
+            <Link href='https://twitter.com/m_t_tion1'>
+              <TwitterIcon className='h-8 w-8 hover:opacity-60' />
+            </Link>
+            <Link href='https://www.facebook.com/mentos.muta'>
+              <FacebookIcon className='h-8 w-8 hover:opacity-60' />
+            </Link>
+            <Link href='https://github.com/KaoruMuta'>
+              <GitHubIcon className='h-8 w-8 hover:opacity-60' />
+            </Link>
           </div>
         </div>
         <div className='flex-grow' />
