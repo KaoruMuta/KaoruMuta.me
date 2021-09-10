@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import TwitterIcon from '../public/twitter.svg';
-import FacebookIcon from '../public/facebook.svg';
-import GitHubIcon from '../public/github.svg';
+import { FaTwitter, FaFacebook, FaGithub } from 'react-icons/fa';
 import MyPicture from '../public/me.png';
 
 const Profile = () => {
@@ -12,13 +10,13 @@ const Profile = () => {
         <br></br>Application Engineer
         <div className='flex flex-row h-8 mt-8 gap-x-8'>
           <a href='https://twitter.com/m_t_tion1'>
-            <TwitterIcon className='h-8 w-8 hover:opacity-60' />
+            <FaTwitter className='h-8 w-8 hover:opacity-60' />
           </a>
           <a href='https://www.facebook.com/mentos.muta'>
-            <FacebookIcon className='h-8 w-8 hover:opacity-60' />
+            <FaFacebook className='h-8 w-8 hover:opacity-60' />
           </a>
           <a href='https://github.com/KaoruMuta'>
-            <GitHubIcon className='h-8 w-8 hover:opacity-60' />
+            <FaGithub className='h-8 w-8 hover:opacity-60' />
           </a>
         </div>
       </div>
