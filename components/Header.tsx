@@ -7,8 +7,6 @@ const Header = () => {
         KaoruMuta.me.
         <FcApproval className='ml-1' />
       </span>
-      <span className='flex-none'>Career</span>
-      <span className='flex-none ml-8'>Works</span>
       <span className='flex-none ml-8'>Articles</span>
     </header>
   );
