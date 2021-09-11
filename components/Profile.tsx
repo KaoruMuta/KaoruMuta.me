@@ -6,9 +6,11 @@ const Profile = () => {
   return (
     <div className='flex flex-row flex-auto items-center'>
       <div>
-        <span className='font-sans font-semibold text-6xl'>Kaoru Muta</span>
-        <br></br>Application Engineer
-        <div className='flex flex-row h-8 mt-8 gap-x-8'>
+        <div className='cursor-default'>
+          <span className='font-sans font-semibold text-6xl'>Kaoru Muta</span>
+          <br></br>Application Engineer
+        </div>
+        <div className='flex flex-row mt-8 space-x-8'>
           <a href='https://twitter.com/m_t_tion1'>
             <FaTwitter className='h-8 w-8 hover:opacity-60' />
           </a>

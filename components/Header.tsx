@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header className='flex flex-row font-sans font-semibold mt-8'>
-      <span className='inline-flex flex-1 items-center'>
+      <span className='inline-flex flex-1 items-center cursor-default'>
         KaoruMuta.me.
         <FcApproval className='ml-1' />
       </span>
