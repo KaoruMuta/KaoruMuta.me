@@ -1,4 +1,5 @@
 import { FcApproval } from 'react-icons/fc';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -7,7 +8,12 @@ const Header = () => {
         KaoruMuta.me.
         <FcApproval className='ml-1' />
       </span>
-      <span className='flex-none ml-8'>Articles</span>
+      <Link href='/'>
+        <a className='flex-none'>Home</a>
+      </Link>
+      <Link href='/articles'>
+        <a className='flex-none ml-8'>Articles</a>
+      </Link>
     </header>
   );
 };
