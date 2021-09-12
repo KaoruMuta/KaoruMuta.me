@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className='flex flex-row font-sans font-semibold mt-8'>
+    <header className='flex flex-row font-sans font-semibold mt-8 space-x-4'>
       <span className='inline-flex flex-1 items-center cursor-default'>
         KaoruMuta.me.
         <FcApproval className='ml-1' />
@@ -12,7 +12,7 @@ const Header = () => {
         <a className='flex-none'>Home</a>
       </Link>
       <Link href='/articles'>
-        <a className='flex-none ml-8'>Articles</a>
+        <a className='flex-none'>Articles</a>
       </Link>
     </header>
   );

@@ -9,14 +9,14 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className='mx-8 md:mx-48 lg:mx-72'>
+    <div className='mx-4 sm:mx-16 md:mx-56'>
       <Head>
         <title>Kaoru Muta</title>
         <meta name='description' content="Kaoru Muta's personal website" />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main className='my-48'>{children}</main>
+      <main className='my-24 xl:my-48'>{children}</main>
       <Footer />
     </div>
   );
