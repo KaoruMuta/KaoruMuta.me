@@ -4,8 +4,8 @@ import MyPicture from '../public/me.png';
 
 const Profile = () => {
   return (
-    <div className='flex flex-auto flex-col-reverse items-center xl:flex-row'>
-      <div className='mt-8 text-center xl:text-left'>
+    <div className='flex flex-auto flex-col-reverse items-center justify-center min-h-full xl:flex-row'>
+      <div className='mt-8 text-center xl:mt-0 xl:text-left'>
         <div className='font-sans cursor-default'>
           <span className='font-semibold text-4xl sm:text-5xl md:text-6xl xl:text-7xl'>Kaoru Muta</span>
           <br></br>
@@ -23,7 +23,7 @@ const Profile = () => {
           </a>
         </div>
       </div>
-      <div className='flex-grow' />
+      <div className='xl:flex-grow' />
       <div className='w-52 sm:w-60 md:w-80 xl:w-auto'>
         <Image
           className='rounded-full'
