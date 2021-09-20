@@ -10,18 +10,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    plugin(function ({ addBase, theme }) {
-      addBase({
-        h1: {
-          fontSize: theme('fontSize.2xl'),
-          fontWeight: theme('fontWeight.semibold'),
-        },
-        h2: {
-          fontSize: theme('fontSize.xl'),
-          fontWeight: theme('fontWeight.semibold'),
-        },
-      });
-    }),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };
