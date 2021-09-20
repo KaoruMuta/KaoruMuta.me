@@ -1,6 +1,6 @@
+import { InferGetStaticPropsType } from 'next';
 import { loadAllPostIds, loadPost } from '../../../lib/blog/posts';
 import { GetStaticPropsType } from '../../../types/GetStaticPropsType';
-import { PostPropsType } from '../../../types/PostPropsType';
 
 export function getStaticProps({ params }: GetStaticPropsType) {
   const post = loadPost(params.id);
@@ -19,7 +19,7 @@ export function getStaticPaths() {
   };
 }
 
-const Post = ({ post }: PostPropsType) => {
+const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { title, content, date } = post;
   return (
     <article className="font-sans mt-8 xl:mt-16">
