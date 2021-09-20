@@ -1,13 +1,9 @@
 import Head from 'next/head';
-import { ReactNode } from 'react';
 import Footer from './Footer';
 import Header from './Header';
+import { LayoutPropsType } from '../types/LayoutPropsType';
 
-type Props = {
-  children?: ReactNode;
-};
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: LayoutPropsType) => {
   return (
     <div className="flex flex-col mx-4 sm:mx-16 md:mx-56 h-screen">
       <Head>

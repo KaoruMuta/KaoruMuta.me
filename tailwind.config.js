@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
@@ -8,5 +10,18 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        h1: {
+          fontSize: theme('fontSize.2xl'),
+          fontWeight: theme('fontWeight.semibold'),
+        },
+        h2: {
+          fontSize: theme('fontSize.xl'),
+          fontWeight: theme('fontWeight.semibold'),
+        },
+      });
+    }),
+  ],
 };
