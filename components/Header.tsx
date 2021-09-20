@@ -15,7 +15,7 @@ const Header = () => {
         <a className={router.asPath === '/' ? 'border-b border-black' : 'border-b border-white'}>Home</a>
       </Link>
       <Link href="/blog">
-        <a className={router.asPath === '/blog' ? 'border-b border-black' : 'border-b border-white'}>Blog</a>
+        <a className={router.asPath.startsWith('/blog') ? 'border-b border-black' : 'border-b border-white'}>Blog</a>
       </Link>
     </header>
   );
