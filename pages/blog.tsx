@@ -13,15 +13,15 @@ export function getStaticProps() {
 
 const Blog = ({ allSortedPostsByDate }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <section className="font-sans divide-y mt-8 xl:mt-16">
-      <h1 className="font-semibold text-2xl xl:text-4xl">tionblog</h1>
+    <section className="font-sans divide-y my-8 xl:my-16">
+      <h1 className="font-semibold text-2xl xl:text-4xl cursor-default">tionblog</h1>
       {allSortedPostsByDate.map((post) => {
         const { id, title, date } = post;
         return (
-          <section className="flex flex-row mt-2 pt-2" key={id}>
-            <time>{date}</time>
+          <section className="flex flex-row items-center my-4 py-4" key={id}>
+            <time className="flex-1 text-sm cursor-default">{date}</time>
             <Link href={`blog/posts/${id}`}>
-              <a className="ml-16 font-semibold">{title}</a>
+              <a className="flex-1 flex-wrap font-semibold">{title}</a>
             </Link>
           </section>
         );

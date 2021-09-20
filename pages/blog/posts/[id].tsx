@@ -22,10 +22,10 @@ export function getStaticPaths() {
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { title, content, date } = post;
   return (
-    <article className="font-sans mt-8 xl:mt-16">
+    <article className="font-sans my-8 xl:my-16 cursor-default">
       <h1 className="font-semibold text-2xl xl:text-4xl">{title}</h1>
-      <time>{date}</time>
-      <article className="mt-2 pt-2" dangerouslySetInnerHTML={{ __html: content }} />
+      <time>{date + 'に投稿'}</time>
+      <article className="py-4" dangerouslySetInnerHTML={{ __html: content }} />
     </article>
   );
 };
