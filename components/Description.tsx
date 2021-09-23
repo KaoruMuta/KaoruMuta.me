@@ -10,7 +10,7 @@ const Description = ({ date, categories }: { date: string; categories: string[] 
         {categories.map((category) => {
           return (
             <Link href={`/blog/categories/${category}`} key={category}>
-              <a className="ml-2 text-sm">{category}</a>
+              <a className="ml-2 text-sm hover:opacity-hover">{category}</a>
             </Link>
           );
         })}

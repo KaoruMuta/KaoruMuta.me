@@ -13,13 +13,13 @@ const Profile = () => {
         </div>
         <section className="flex flex-row mt-8 space-x-8 justify-center xl:justify-start">
           <a href="https://twitter.com/m_t_tion1">
-            <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-60" />
+            <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
           </a>
           <a href="https://www.facebook.com/mentos.muta">
-            <FaFacebook className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-60" />
+            <FaFacebook className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
           </a>
           <a href="https://github.com/KaoruMuta">
-            <FaGithub className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-60" />
+            <FaGithub className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
           </a>
         </section>
       </div>
