@@ -14,7 +14,7 @@ export function getStaticProps() {
 const Blog = ({ allSortedPostsByDate }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <section className="font-sans divide-y my-8 xl:my-16">
-      <h1 className="font-bold text-3xl xl:text-5xl">tionblog</h1>
+      <h1 className="font-bold text-4xl xl:text-5xl">tionblog</h1>
       {allSortedPostsByDate.map((post) => {
         const { id, title, date } = post;
         return (
