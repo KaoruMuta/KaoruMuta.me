@@ -2,10 +2,12 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import marked from 'marked';
+import { PostPropsType } from '../../types/PostPropsType';
+import { formatDate } from '../date';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-const loadAllPosts = (directoryPath: string) => {
+const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   const fileNames = fs.readdirSync(directoryPath);
   const allPosts = fileNames
     .map((fileName) => {
@@ -14,11 +16,12 @@ const loadAllPosts = (directoryPath: string) => {
       const matterResult = matter(postContents);
       const { title, date } = matterResult.data;
       const contentHtml = marked(matterResult.content);
+      const formattedDate = formatDate(date);
 
       return {
         title: title,
         content: contentHtml,
-        date: date,
+        date: formattedDate,
       };
     })
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
