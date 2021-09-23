@@ -55,7 +55,26 @@ export function loadAllPostIds() {
   });
 }
 
-export function loadPost(id: string) {
+export function loadPostById(id: string) {
   const allPosts = loadAllPosts(postsDirectory);
   return allPosts.find((post) => post.id === id);
+}
+
+export function loadAllCategories() {
+  const allPosts = loadAllPosts(postsDirectory);
+  const allCategories = allPosts.flatMap((post) => post.categories);
+  const allUniqueCategories = Array.from(new Set(allCategories));
+
+  return allUniqueCategories.map((category) => {
+    return {
+      params: {
+        category: category,
+      },
+    };
+  });
+}
+
+export function loadSortedPostsForCategoryByDate(category: string) {
+  const allSortedPostsByDate = loadAllSortedPostsByDate();
+  return allSortedPostsByDate.filter((post) => post.categories.includes(category));
 }

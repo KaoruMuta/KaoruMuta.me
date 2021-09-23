@@ -1,11 +1,10 @@
 import { InferGetStaticPropsType } from 'next';
 import Description from '../../../components/Description';
 import Title from '../../../components/Title';
-import { loadAllPostIds, loadPost } from '../../../lib/blog/posts';
-import { GetStaticPropsType } from '../../../types/GetStaticPropsType';
+import { loadAllPostIds, loadPostById } from '../../../lib/blog/posts';
 
-export function getStaticProps({ params }: GetStaticPropsType) {
-  const post = loadPost(params.id);
+export function getStaticProps({ params }: { params: { id: string } }) {
+  const post = loadPostById(params.id);
   return {
     props: {
       post,
@@ -22,7 +21,7 @@ export function getStaticPaths() {
 }
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { id, title, content, date, categories } = post;
+  const { title, content, date, categories } = post;
   return (
     <article className="font-sans my-8 xl:my-16">
       <Title name={title} />

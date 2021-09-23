@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaTags } from 'react-icons/fa';
 
 const Description = ({ date, categories }: { date: string; categories: string[] }) => {
@@ -8,9 +9,9 @@ const Description = ({ date, categories }: { date: string; categories: string[] 
         <FaTags className="ml-0 xl:ml-8" />
         {categories.map((category) => {
           return (
-            <span className="ml-2 text-sm" key={category}>
-              {category}
-            </span>
+            <Link href={`/blog/categories/${category}`} key={category}>
+              <a className="ml-2 text-sm">{category}</a>
+            </Link>
           );
         })}
       </section>
