@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import { LayoutPropsType } from '../types/LayoutPropsType';
 import Footer from './Footer';
 import Header from './Header';
-import { LayoutPropsType } from '../types/LayoutPropsType';
 
 const Layout = ({ children }: LayoutPropsType) => {
   return (

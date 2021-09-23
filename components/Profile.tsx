@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaTwitter, FaFacebook, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 import MyPicture from '../public/me.png';
 
 const Profile = () => {

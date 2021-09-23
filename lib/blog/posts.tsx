@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import path from 'path';
 import marked from 'marked';
+import path from 'path';
 import { PostPropsType } from '../../types/PostPropsType';
 import { formatDate } from '../date';
 

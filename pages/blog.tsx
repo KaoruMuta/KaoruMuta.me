@@ -1,9 +1,8 @@
 import { InferGetStaticPropsType } from 'next';
-import { loadAllSortedPostsByDate } from '../lib/blog/posts';
-import { FaTags } from 'react-icons/fa';
 import Link from 'next/link';
-import Title from '../components/Title';
 import Description from '../components/Description';
+import Title from '../components/Title';
+import { loadAllSortedPostsByDate } from '../lib/blog/posts';
 
 export function getStaticProps() {
   const allSortedPostsByDate = loadAllSortedPostsByDate();
