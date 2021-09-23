@@ -11,7 +11,7 @@ const Profile = () => {
           <br></br>
           <span className="text-sm sm:text-base md:text-xl xl:text-2xl">Application Engineer</span>
         </div>
-        <div className="flex flex-row mt-8 space-x-8 justify-center xl:justify-start">
+        <section className="flex flex-row mt-8 space-x-8 justify-center xl:justify-start">
           <a href="https://twitter.com/m_t_tion1">
             <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-60" />
           </a>
@@ -21,7 +21,7 @@ const Profile = () => {
           <a href="https://github.com/KaoruMuta">
             <FaGithub className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-60" />
           </a>
-        </div>
+        </section>
       </div>
       <div className="xl:flex-grow" />
       <div className="w-52 sm:w-60 md:w-80 xl:w-auto">

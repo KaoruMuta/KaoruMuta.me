@@ -1,4 +1,6 @@
 import { InferGetStaticPropsType } from 'next';
+import Description from '../../../components/Description';
+import Title from '../../../components/Title';
 import { loadAllPostIds, loadPost } from '../../../lib/blog/posts';
 import { GetStaticPropsType } from '../../../types/GetStaticPropsType';
 
@@ -20,11 +22,11 @@ export function getStaticPaths() {
 }
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { title, content, date } = post;
+  const { id, title, content, date, categories } = post;
   return (
     <article className="font-sans my-8 xl:my-16">
-      <h1 className="font-bold text-4xl xl:text-5xl">{title}</h1>
-      <time className="block mt-1 text-sm">{date + 'に投稿'}</time>
+      <Title name={title} />
+      <Description date={date} categories={categories} />
       <hr className="mt-4"></hr>
       <article className="py-4 max-w-none prose xl:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
     </article>

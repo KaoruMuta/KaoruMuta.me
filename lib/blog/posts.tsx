@@ -14,14 +14,16 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
       const fullPostPath = path.join(postsDirectory, fileName);
       const postContents = fs.readFileSync(fullPostPath, 'utf-8');
       const matterResult = matter(postContents);
-      const { title, date } = matterResult.data;
+      const { title, date, categories } = matterResult.data;
       const contentHtml = marked(matterResult.content);
       const formattedDate = formatDate(date);
+      const categoryList = categories !== undefined || !categories.length ? categories.split(' ') : [];
 
       return {
         title: title,
         content: contentHtml,
         date: formattedDate,
+        categories: categoryList,
       };
     })
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())

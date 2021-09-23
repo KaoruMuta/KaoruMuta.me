@@ -3,4 +3,5 @@ export type PostPropsType = {
   title: string;
   content: string;
   date: string;
+  categories: string[];
 };

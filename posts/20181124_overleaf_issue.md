@@ -1,6 +1,7 @@
 ---
 title: 【LaTeX】Overleafを使っていてpdfも画像も表示されない…真っ白…嘘でしょ
 date: 2018-11-24 23:47
+categories: 技術 研究 知見
 ---
 
 ## 遭遇した問題

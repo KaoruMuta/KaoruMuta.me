@@ -1,6 +1,7 @@
 ---
 title: 【Python】エラー集
 date: 2019-02-04 00:32
+categories: 技術 知見 python
 ---
 
 ## Python を書いているときに遭遇したエラー

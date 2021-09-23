@@ -1,6 +1,7 @@
 ---
 title: 【PyTorch】学習時，推論(テスト)時での注意/model.eval()←めちゃくちゃ大事
 date: 2018-11-24 23:33
+categories: 技術 研究 知見
 ---
 
 ## はじめに
