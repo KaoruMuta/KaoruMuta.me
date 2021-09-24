@@ -42,9 +42,7 @@ categories: 生活 1ヶ月の目標
 
 - iOSDC のトークにプロポーザル出す！！（IGStoryButtonKit を拡張させてアニメーション周りの話したいなあ）→100%
 
-iOSDC のプロポーザル出しました！
-
-[https://fortee.jp/iosdc-japan-2021/proposal/482fe8e0-5ebd-452e-860d-0f118dfbdad5:embed:cite]
+iOSDC の<a href="https://fortee.jp/iosdc-japan-2021/proposal/482fe8e0-5ebd-452e-860d-0f118dfbdad5">プロポーザル</a>出しました！
 
 qiita の下書きを整理していた時に、この絵文字バリデーションの話が出てきたので、これは iOS エンジニアにとっては知見となる話ができるんじゃないかな、と思い勢いで投稿しました。他のプロポーザル見る限り聞きたい話ばかりで、iOSDC おもしろいだろうなあ。。（<span style="font-size: 80%">採択もされてほしいな</span>）
 
