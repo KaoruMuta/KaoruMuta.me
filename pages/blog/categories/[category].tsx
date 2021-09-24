@@ -1,9 +1,9 @@
 import { InferGetStaticPropsType } from 'next';
 import Gallery from '../../../components/Gallery';
 import Title from '../../../components/Title';
-import { loadAllCategories, loadSortedPostsForCategoryByDate } from '../../../lib/blog/posts';
+import { loadAllCategories, loadSortedPostsForCategoryByDate } from '../../../lib/posts';
 
-export function getStaticProps({ params }: { params: { category: string } }) {
+export const getStaticProps = async ({ params }: { params: { category: string } }) => {
   const posts = loadSortedPostsForCategoryByDate(params.category);
   return {
     props: {
@@ -11,15 +11,15 @@ export function getStaticProps({ params }: { params: { category: string } }) {
       posts: posts,
     },
   };
-}
+};
 
-export function getStaticPaths() {
+export const getStaticPaths = async () => {
   const paths = loadAllCategories();
   return {
     paths,
     fallback: false,
   };
-}
+};
 
 const Category = ({ category, posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (

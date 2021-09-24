@@ -1,16 +1,16 @@
 import { InferGetStaticPropsType } from 'next';
 import Gallery from '../components/Gallery';
 import Title from '../components/Title';
-import { loadAllSortedPostsByDate } from '../lib/blog/posts';
+import { loadAllSortedPostsByDate } from '../lib/posts';
 
-export function getStaticProps() {
+export const getStaticProps = async () => {
   const allSortedPostsByDate = loadAllSortedPostsByDate();
   return {
     props: {
       allSortedPostsByDate,
     },
   };
-}
+};
 
 const Blog = ({ allSortedPostsByDate }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (

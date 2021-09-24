@@ -2,8 +2,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import marked from 'marked';
 import path from 'path';
-import { PostPropsType } from '../../types/PostPropsType';
-import { formatDate } from '../date';
+import { PostPropsType } from '../types/PostPropsType';
+import { formatDate } from './date';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -38,12 +38,12 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   return allPosts;
 };
 
-export function loadAllSortedPostsByDate() {
+export const loadAllSortedPostsByDate = () => {
   const allPosts = loadAllPosts(postsDirectory);
   return allPosts.reverse();
-}
+};
 
-export function loadAllPostIds() {
+export const loadAllPostIds = () => {
   const allPosts = loadAllPosts(postsDirectory);
 
   return allPosts.map((post) => {
@@ -53,14 +53,14 @@ export function loadAllPostIds() {
       },
     };
   });
-}
+};
 
-export function loadPostById(id: string) {
+export const loadPostById = (id: string) => {
   const allPosts = loadAllPosts(postsDirectory);
   return allPosts.find((post) => post.id === id);
-}
+};
 
-export function loadAllCategories() {
+export const loadAllCategories = () => {
   const allPosts = loadAllPosts(postsDirectory);
   const allCategories = allPosts.flatMap((post) => post.categories);
   const allUniqueCategories = Array.from(new Set(allCategories));
@@ -72,9 +72,9 @@ export function loadAllCategories() {
       },
     };
   });
-}
+};
 
-export function loadSortedPostsForCategoryByDate(category: string) {
+export const loadSortedPostsForCategoryByDate = (category: string) => {
   const allSortedPostsByDate = loadAllSortedPostsByDate();
   return allSortedPostsByDate.filter((post) => post.categories.includes(category));
-}
+};
