@@ -26,7 +26,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const url = `${process.env.HOST}/blog/post/${id}`;
 
   return (
-    <article className="font-sans my-8 xl:my-16">
+    <article className="my-16">
       <Title name={title} />
       <Description date={date} categories={categories} />
       <hr className="mt-4"></hr>

@@ -1,6 +1,7 @@
 import { InferGetStaticPropsType } from 'next';
 import Gallery from '../components/Gallery';
 import Title from '../components/Title';
+import { AppConstants } from '../constants/AppConstants';
 import { loadAllSortedPostsByDate } from '../lib/posts';
 
 export const getStaticProps = async () => {
@@ -14,8 +15,8 @@ export const getStaticProps = async () => {
 
 const Blog = ({ allSortedPostsByDate }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <section className="font-sans divide-y my-8 xl:my-16">
-      <Title name="tionblog" />
+    <section className="divide-y my-16">
+      <Title name={AppConstants.BlogPage.TITLE} />
       <Gallery posts={allSortedPostsByDate} />
     </section>
   );

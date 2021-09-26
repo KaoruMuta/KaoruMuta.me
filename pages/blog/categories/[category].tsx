@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 
 const Category = ({ category, posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <section className="font-sans divide-y my-8 xl:my-16">
+    <section className="divide-y my-16">
       <Title name={`# ${category}`} />
       <Gallery posts={posts} />
     </section>

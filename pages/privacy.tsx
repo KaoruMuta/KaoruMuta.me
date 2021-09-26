@@ -8,7 +8,7 @@ const Privacy = () => {
       <Head>
         <title>{AppConstants.PrivacyPage.TITLE}</title>
       </Head>
-      <article className="prose max-w-none my-8 xl:my-16">
+      <article className="prose max-w-none my-16">
         <Title name={AppConstants.PrivacyPage.NAME} />
         <h2>個人情報の利用目的</h2>
         <p>

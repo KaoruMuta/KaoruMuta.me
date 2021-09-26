@@ -8,7 +8,7 @@ const Layout = ({ children, currentPath }: { children?: ReactNode; currentPath: 
   const siteTitle = createSiteTitle(currentPath);
 
   return (
-    <div className="flex flex-col mx-4 sm:mx-16 md:mx-56 h-screen">
+    <div className="flex flex-col font-sans mx-4 sm:mx-16 md:mx-56 h-screen">
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content="Kaoru Muta's personal website" />
