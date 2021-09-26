@@ -1,4 +1,14 @@
 export namespace AppConstants {
+  export namespace Me {
+    export const NAME = 'Kaoru Muta';
+    export const ROLE = 'Application Engineer';
+    export const TWITTER_URL = 'https://twitter.com/m_t_tion1';
+    export const FACEBOOK_URL = 'https://www.facebook.com/mentos.muta';
+    export const GITHUB_URL = 'https://github.com/KaoruMuta';
+    export const ALT_TEXT = "Kaoru Muta's picture";
+    export const COPYRIGHT = '2021 Kaoru Muta.';
+  }
+
   export namespace HomePage {
     export const NAME = 'Home';
     export const TITLE = 'KaoruMuta.me.';
