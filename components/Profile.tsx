@@ -7,8 +7,7 @@ const Profile = () => {
     <div className="flex flex-auto flex-col-reverse items-center justify-center min-h-full xl:flex-row">
       <div className="mt-8 text-center xl:mt-0 xl:text-left">
         <div className="font-sans cursor-default">
-          <span className="font-semibold text-4xl sm:text-5xl md:text-6xl xl:text-7xl">Kaoru Muta</span>
-          <br></br>
+          <span className="block font-semibold text-4xl sm:text-5xl md:text-6xl xl:text-7xl">Kaoru Muta</span>
           <span className="text-sm sm:text-base md:text-xl xl:text-2xl">Application Engineer</span>
         </div>
         <section className="flex flex-row mt-8 space-x-8 justify-center xl:justify-start">

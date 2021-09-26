@@ -10,4 +10,10 @@ export namespace AppConstants {
     export const TITLE = 'tionblog';
     export const PATH = '/blog';
   }
+
+  export namespace PrivacyPage {
+    export const NAME = 'Privacy Policy';
+    export const TITLE = 'Privacy Policy';
+    export const PATH = '/privacy';
+  }
 }
