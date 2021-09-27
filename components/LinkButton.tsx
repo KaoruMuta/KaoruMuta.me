@@ -13,7 +13,9 @@ const LinkButton = ({
     <Link href={destination}>
       <a
         className={
-          isHighlighted ? 'border-b border-black hover:opacity-hover' : 'border-b border-white hover:opacity-hover'
+          isHighlighted
+            ? 'border-b border-black xl:hover:opacity-hover'
+            : 'border-b border-white xl:hover:opacity-hover'
         }
       >
         {name}
