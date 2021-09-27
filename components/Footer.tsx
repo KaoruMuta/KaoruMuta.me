@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="flex flex-row font-sans pb-8">
       <span className="block flex-1 font-semibold">&copy; {AppConstants.Me.COPYRIGHT}</span>
       <Link href={AppConstants.PrivacyPage.PATH}>
-        <a className="block justify-end hover:opacity-hover">{AppConstants.PrivacyPage.NAME}</a>
+        <a className="block justify-end xl:hover:opacity-hover">{AppConstants.PrivacyPage.NAME}</a>
       </Link>
     </footer>
   );

@@ -15,13 +15,13 @@ const Profile = () => {
         </div>
         <section className="flex flex-row mt-8 space-x-8 justify-center xl:justify-start">
           <a href={AppConstants.Me.TWITTER_URL}>
-            <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
+            <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 xl:hover:opacity-hover" />
           </a>
           <a href={AppConstants.Me.FACEBOOK_URL}>
-            <FaFacebook className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
+            <FaFacebook className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 xl:hover:opacity-hover" />
           </a>
           <a href={AppConstants.Me.GITHUB_URL}>
-            <FaGithub className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 hover:opacity-hover" />
+            <FaGithub className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 xl:hover:opacity-hover" />
           </a>
         </section>
       </div>

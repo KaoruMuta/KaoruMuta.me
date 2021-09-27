@@ -10,7 +10,7 @@ const Gallery = ({ posts }: { posts: PostPropsType[] }) => {
         return (
           <section className="my-4 pt-4" key={id}>
             <Link href={`/blog/posts/${id}`}>
-              <a className="font-semibold text-xl xl:text-2xl hover:opacity-hover">{title}</a>
+              <a className="font-semibold text-xl xl:text-2xl xl:hover:opacity-hover">{title}</a>
             </Link>
             <Description date={date} categories={categories} />
           </section>

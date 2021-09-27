@@ -8,7 +8,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     <header className="flex flex-row items-start font-sans font-semibold pt-8 space-x-4 xl:space-x-8">
       <span className="inline-flex flex-1 items-center">
         <Link href={AppConstants.HomePage.PATH}>
-          <a className="hover:opacity-hover">KaoruMuta.me.</a>
+          <a className="xl:hover:opacity-hover">KaoruMuta.me.</a>
         </Link>
         <FcApproval className="ml-1" />
       </span>
