@@ -23,10 +23,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       {GOOGLE_ANALYTICS_ID && (
         <>
           <Script
+            id="gtag-manager"
             strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
           />
           <Script
+            id="gtag-script"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
