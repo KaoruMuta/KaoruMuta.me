@@ -4,5 +4,6 @@ module.exports = {
   reactStrictMode: true,
   env: {
     HOST: isProduction ? 'https://KaoruMuta.me' : 'http://localhost:3000',
+    GOOGLE_ANALYTICS_ID: isProduction ? 'G-PM1SZSW2WT' : '',
   },
 };
