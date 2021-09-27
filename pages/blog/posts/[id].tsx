@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { id, title, content, date, categories } = post;
-  const url = `${process.env.HOST}/blog/post/${id}`;
+  const url = `${process.env.HOST}/blog/posts/${id}`;
 
   return (
     <article className="my-16">
