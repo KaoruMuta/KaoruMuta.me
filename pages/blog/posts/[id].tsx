@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
 import Description from '../../../components/Description';
 import Share from '../../../components/Share';
 import Title from '../../../components/Title';
@@ -26,14 +27,19 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const url = `${process.env.HOST}/blog/posts/${id}`;
 
   return (
-    <article className="my-16">
-      <Title name={title} />
-      <Description date={date} categories={categories} />
-      <hr className="mt-4"></hr>
-      <article className="py-4 max-w-none prose xl:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
-      <hr className="mb-4"></hr>
-      <Share url={url} title={title} />
-    </article>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <article className="my-16">
+        <Title name={title} />
+        <Description date={date} categories={categories} />
+        <hr className="mt-4"></hr>
+        <article className="py-4 max-w-none prose xl:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
+        <hr className="mb-4"></hr>
+        <Share url={url} title={title} />
+      </article>
+    </>
   );
 };
 
