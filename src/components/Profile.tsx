@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 import { AppConstants } from '../constants/AppConstants';
-import MyPicture from '../public/me.png';
+import MyPicture from '../../public/me.png';
 
 const Profile = () => {
   return (
