@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Title from '../components/Title';
 import { AppConstants } from '../constants/AppConstants';
 
-const Privacy = () => {
+const Privacy: NextPage = () => {
   return (
     <>
       <Head>

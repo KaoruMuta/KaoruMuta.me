@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Gallery from '../components/Gallery';
 import Title from '../components/Title';
@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blog = ({ allSortedPostsByDate }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ allSortedPostsByDate }) => {
   return (
     <>
       <Head>

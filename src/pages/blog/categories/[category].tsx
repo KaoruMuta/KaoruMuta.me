@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Gallery from '../../../components/Gallery';
 import Title from '../../../components/Title';
 import { loadAllCategories, loadSortedPostsForCategoryByDate } from '../../../lib/posts';
@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Category = ({ category, posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Category: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ category, posts }) => {
   return (
     <section className="divide-y my-16">
       <Title name={`# ${category}`} />
