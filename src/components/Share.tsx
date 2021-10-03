@@ -9,7 +9,7 @@ import {
 
 const Share = ({ url, title }: { url: string; title: string }) => {
   return (
-    <section className="flex flex-row space-x-2">
+    <section className="flex space-x-2">
       <TwitterShareButton url={url} title={title} hashtags={['tionblog']}>
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>

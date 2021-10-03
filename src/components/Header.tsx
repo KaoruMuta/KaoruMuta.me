@@ -5,7 +5,7 @@ import LinkButton from './LinkButton';
 
 const Header = ({ currentPath }: { currentPath: string }) => {
   return (
-    <header className="flex flex-row items-start font-sans font-semibold pt-8 space-x-4 xl:space-x-8">
+    <header className="flex items-start font-semibold pt-8 space-x-4 xl:space-x-8">
       <span className="inline-flex flex-1 items-center">
         <Link href={AppConstants.HomePage.PATH}>
           <a className="xl:hover:opacity-hover">{AppConstants.HomePage.TITLE}</a>
