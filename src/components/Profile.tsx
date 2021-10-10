@@ -7,12 +7,10 @@ const Profile = () => {
   return (
     <div className="flex flex-auto flex-col-reverse items-center justify-center min-h-full xl:flex-row xl:justify-between">
       <div className="mt-8 text-center xl:mt-0 xl:text-left">
-        <div className="cursor-default">
-          <span className="block font-semibold text-4xl sm:text-5xl md:text-6xl xl:text-7xl">
-            {AppConstants.Me.NAME}
-          </span>
-          <span className="text-sm sm:text-base md:text-xl xl:text-2xl">{AppConstants.Me.ROLE}</span>
-        </div>
+        <section className="cursor-default">
+          <p className="font-semibold text-4xl sm:text-5xl md:text-6xl xl:text-7xl">{AppConstants.Me.NAME}</p>
+          <p className="text-sm sm:text-base md:text-xl xl:text-2xl">{AppConstants.Me.ROLE}</p>
+        </section>
         <section className="flex mt-8 space-x-8 justify-center xl:justify-start">
           <a href={AppConstants.Me.TWITTER_URL}>
             <FaTwitter className="h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 xl:hover:opacity-hover" />
