@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Description from '../../../components/Description';
 import Share from '../../../components/Share';
@@ -22,7 +22,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }) => {
   const { id, title, content, date, categories } = post;
   const url = `${process.env.HOST}/blog/posts/${id}`;
 
