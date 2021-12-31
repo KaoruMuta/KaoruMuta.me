@@ -4,7 +4,7 @@ date: 2020-12-18 23:50
 categories: 技術 CI iOS GitHubActions
 ---
 
-# はじめに
+## はじめに
 
 ずっと前の自分：「`GoogleService-info.plist`を gitignore してるから永遠 GitHubActions での CI のビルドが通らない！！！！！！どうしよう！！！」
 何もわからん状態だった自分を救ってくれたのは，Android で同じようなことをしている[記事](https://qiita.com/sudo5in5k/items/5b6da5dbba3fc2514319)でした．
@@ -19,7 +19,7 @@ categories: 技術 CI iOS GitHubActions
 
 ならば，これを iOS でも同じようにすればいいじゃないか！となりますよね．やりましょう．
 
-# 手順
+## 手順
 
 1. `GoogleService-info.plist`を json に変換
 2. 生成した json ファイルを base64 の形にし，secrets に記述
@@ -63,13 +63,13 @@ cat output.json | base64
 `GOOGLE_SERVICE`という名前で secrets に記述されている base64 を取得 →json に decode→json から plist に変換という流れ．
 （`OgiriBattle_Swift/Common/Resources/`のパスは例です）
 
-# 最後に
+## 最後に
 
 いい記事を残してくれた先人の方々に感謝を込めて，自分もいい記事を書こうとなりました．
 間違い等あれば指摘してください．お願いします！
 また，いい記事だと思った方はグッドボタンと Twitter のフォローをね，よかったらお願いします！（どこぞの Youtuber みたいだな）
 
-# 救世主となったサイト
+## 救世主となったサイト
 
 1. https://qiita.com/sudo5in5k/items/5b6da5dbba3fc2514319
 2. https://qiita.com/hohohoris/items/f934beb4ea0b432af488
