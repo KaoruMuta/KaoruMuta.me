@@ -46,6 +46,8 @@ Please feel free to ask! (Of course, you can use any languages.)
 - postcss
 - prettier
 - typescript
+- prism.js
+- babel-plugin-prismjs
 
 </details>
 
@@ -62,6 +64,7 @@ Please feel free to ask! (Of course, you can use any languages.)
 - https://sunday-morning.app/posts/2020-11-22-react-share-sns
 - https://jhcoder.com/2020-08-16
 - https://zenn.dev/catnose99/articles/7201a6c56d3c88
+- https://sunday-morning.app/posts/2020-12-15-next-js-prism-js-syntax-highlight
 
 </details>
 
