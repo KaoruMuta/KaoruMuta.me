@@ -31,7 +31,7 @@ categories: 技術 CI iOS GitHubActions
 [記事](https://www.ecoop.net/memo/archives/convert_plist_to_or_from_json.html)を参考に変換しました．
 （下の`/path/to/dir`は GoogleService-info.plist が存在するディレクトリまでのパス．）
 
-```sh plist
+```bash
 cd /path/to/dir
 plutil -convert json GoogleService-info.plist -r -o output.json
 ```
@@ -40,7 +40,7 @@ plutil -convert json GoogleService-info.plist -r -o output.json
 
 cat で出力した結果（[記事](https://qiita.com/sudo5in5k/items/5b6da5dbba3fc2514319)参考）をそのまま Secrets に貼り付けます
 
-```sh
+```bash
 cat output.json | base64
 ```
 
