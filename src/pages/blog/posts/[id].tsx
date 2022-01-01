@@ -1,5 +1,7 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import Prism from 'prismjs';
 import Description from '../../../components/Description';
 import Share from '../../../components/Share';
 import Title from '../../../components/Title';
@@ -25,6 +27,10 @@ export const getStaticPaths = async () => {
 const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }) => {
   const { id, title, content, date, categories } = post;
   const url = `${process.env.HOST}/blog/posts/${id}`;
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <>
