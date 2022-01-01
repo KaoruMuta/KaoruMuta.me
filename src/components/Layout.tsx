@@ -1,14 +1,9 @@
 import Head from 'next/head';
-import { ReactNode, useEffect } from 'react';
-import Prism from 'prismjs';
+import { ReactNode } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 
 const Layout = ({ children, currentPath }: { children?: ReactNode; currentPath: string }) => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
   return (
     <div className="flex flex-col font-sans mx-4 sm:mx-16 md:mx-56 h-screen">
       <Head>
