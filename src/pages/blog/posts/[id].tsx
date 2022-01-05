@@ -5,6 +5,7 @@ import Prism from 'prismjs';
 import Description from '../../../components/Description';
 import Share from '../../../components/Share';
 import Title from '../../../components/Title';
+import Ads from 'components/Ads';
 import { loadAllPostIds, loadPostById } from '../../../lib/posts';
 
 export const getStaticProps = async ({ params }: { params: { id: string } }) => {
@@ -47,6 +48,7 @@ const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }
         />
         <hr className="mb-4"></hr>
         <Share url={url} title={title} />
+        <Ads />
       </article>
     </>
   );
