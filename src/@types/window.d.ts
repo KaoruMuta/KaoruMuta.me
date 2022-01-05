@@ -3,5 +3,5 @@ interface Window {
 }
 
 declare global {
-  var window: Window;
+  const window: Window;
 }
