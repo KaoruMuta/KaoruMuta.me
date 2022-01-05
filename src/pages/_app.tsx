@@ -5,8 +5,8 @@ import Script from 'next/script';
 import { useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 import 'prismjs/themes/prism-okaidia.css';
-import Layout from '../components/Layout';
-import { GOOGLE_ANALYTICS_ID, pageview } from '../lib/gtag';
+import Layout from 'components/Layout';
+import { GOOGLE_ANALYTICS_ID, pageview } from 'lib/gtag';
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();

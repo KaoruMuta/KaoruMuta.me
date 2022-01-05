@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PostPropsType } from '../types/PostPropsType';
+import { PostPropsType } from 'types/PostPropsType';
 import Description from './Description';
 
 const Gallery = ({ posts }: { posts: PostPropsType[] }) => {

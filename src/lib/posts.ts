@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import marked from 'marked';
 import path from 'path';
-import { PostPropsType } from '../types/PostPropsType';
+import { PostPropsType } from 'types/PostPropsType';
 import { formatDate } from './date';
 
 const postsDirectory = path.join(process.cwd(), 'posts');

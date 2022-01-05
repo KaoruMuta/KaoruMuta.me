@@ -65,6 +65,8 @@ Please feel free to ask! (Of course, you can use any languages.)
 - https://jhcoder.com/2020-08-16
 - https://zenn.dev/catnose99/articles/7201a6c56d3c88
 - https://sunday-morning.app/posts/2020-12-15-next-js-prism-js-syntax-highlight
+- https://b.0218.jp/202104021830.html
+- https://imatomix.com/imatomix/notes/1637308371772
 
 </details>
 
