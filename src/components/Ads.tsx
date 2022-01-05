@@ -13,7 +13,7 @@ const Ads = () => {
   }, [router.asPath]);
 
   return (
-    <div key={router.asPath}>
+    <div className="mt-4" key={router.asPath}>
       <ins
         className="adsbygoogle block"
         data-ad-client={process.env.GOOGLE_ADSENSE_CLIENT_ID}
