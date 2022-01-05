@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AppConstants } from '../constants/AppConstants';
+import { AppConstants } from 'constants/AppConstants';
 
 const Footer = () => {
   return (

@@ -2,11 +2,11 @@ import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import Prism from 'prismjs';
-import Description from '../../../components/Description';
-import Share from '../../../components/Share';
-import Title from '../../../components/Title';
+import Title from 'components/Title';
+import Description from 'components/Description';
+import Share from 'components/Share';
 import Ads from 'components/Ads';
-import { loadAllPostIds, loadPostById } from '../../../lib/posts';
+import { loadAllPostIds, loadPostById } from 'lib/posts';
 
 export const getStaticProps = async ({ params }: { params: { id: string } }) => {
   const post = loadPostById(params.id);

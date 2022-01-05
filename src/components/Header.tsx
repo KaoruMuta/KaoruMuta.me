@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FcApproval } from 'react-icons/fc';
-import { AppConstants } from '../constants/AppConstants';
+import { AppConstants } from 'constants/AppConstants';
 import LinkButton from './LinkButton';
 
 const Header = ({ currentPath }: { currentPath: string }) => {
