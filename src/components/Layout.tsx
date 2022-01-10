@@ -5,7 +5,7 @@ import Header from './Header';
 
 const Layout = ({ children, currentPath }: { children?: ReactNode; currentPath: string }) => {
   return (
-    <div className="flex flex-col font-sans mx-4 sm:mx-16 md:mx-56 h-screen">
+    <div id="layoutContainer" className="flex flex-col font-sans mx-4 sm:mx-16 md:mx-56 h-screen">
       <Head>
         <meta name="description" content="Kaoru Muta's personal website" />
         <link rel="icon" href="/favicon.ico" />

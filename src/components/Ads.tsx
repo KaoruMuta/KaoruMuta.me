@@ -10,6 +10,11 @@ const Ads = () => {
     } catch (err) {
       console.log(err);
     }
+    return () => {
+      // For removing `style="height: auto !important;" in #__next and #layoutContainer`
+      document.querySelector('#__next')?.removeAttribute('style');
+      document.querySelector('#layoutContainer')?.removeAttribute('style');
+    };
   }, [router.asPath]);
 
   return (
