@@ -9,7 +9,7 @@ const Privacy: NextPage = () => {
       <Head>
         <title>{AppConstants.PrivacyPage.TITLE}</title>
       </Head>
-      <article className="prose max-w-none my-16">
+      <article className="prose prose-indigo max-w-none my-16">
         <Title name={AppConstants.PrivacyPage.NAME} />
         <h2>{AppConstants.PrivacyPage.CONTENTS.PERSONAL_INFORMATION.title}</h2>
         <p>{AppConstants.PrivacyPage.CONTENTS.PERSONAL_INFORMATION.description}</p>
