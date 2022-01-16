@@ -12,6 +12,18 @@ module.exports = {
       opacity: {
         hover: '0.6',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': {
+              content: '" "',
+            },
+            'code::after': {
+              content: '" "',
+            },
+          },
+        },
+      },
     },
   },
   variants: {
