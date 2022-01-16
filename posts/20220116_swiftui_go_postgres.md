@@ -1,5 +1,5 @@
 ---
-title: SwiftUI+Golang+Postgres+herokuで遊んでみた感想と知見
+title: SwiftUI+Golang+Heroku Postgresで遊んでみた感想と知見
 date: 2022-01-16 19:33
 categories: 技術 iOS SwiftUI Golang PostgreSQL Heroku
 ---
