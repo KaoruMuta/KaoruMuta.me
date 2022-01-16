@@ -71,17 +71,21 @@ API との通信処理が終わったあとに画面遷移をしたいときは�
 
 ```swift
 NavigationLink(destination: QuizView(words: viewModel.words), isActive: $shouldShowQuizView) {
-                    Button(action: {
-                        viewModel.fetchWords(by: selectedCategoryId, success: {
-                            // success callbackのときにshouldShowQuizViewをtrueにする
-                            self.shouldShowQuizView = true
-                        }, failure: {
-                            print("Failed to fetch data from api")
-                        })
-                    }) {
-                        Text("START")
-                    }
-                }
+    Button(action: {
+        viewModel.fetchWords(
+            by: selectedCategoryId,
+            success: {
+                // success callbackのときにshouldShowQuizViewをtrueにする
+                self.shouldShowQuizView = true
+            },
+            failure: {
+                print("Failed to fetch data from api")
+            }
+        )
+    }) {
+        Text("START")
+    }
+}
 ```
 
 参考: https://blog.studysapuri.jp/entry/2021/09/18/iosdc-swiftui-navigationlink-push-navigation
