@@ -38,14 +38,11 @@ const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }
       <Head>
         <title>{title}</title>
       </Head>
-      <article className="my-16">
+      <article className="my-16 break-all">
         <Title name={title} />
         <Description date={date} categories={categories} />
         <hr className="mt-4"></hr>
-        <article
-          className="py-4 max-w-none break-all prose xl:prose-xl"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <article className="py-4 max-w-none prose xl:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
         <hr className="mb-4"></hr>
         <Share url={url} title={title} />
         <Ads />
