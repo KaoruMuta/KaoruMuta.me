@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -10,9 +11,10 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <script
+          <Script
+            data-ad-client={`${process.env.GOOGLE_ADSENSE_CLIENT_ID}`}
             async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE_CLIENT_ID}`}
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             crossOrigin="anonymous"
           />
         </Head>
