@@ -14,8 +14,13 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           {GOOGLE_ANALYTICS_ID && (
             <>
-              <script id="gtag-manager" src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
               <script
+                async
+                id="gtag-manager"
+                src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+              />
+              <script
+                async
                 id="gtag-script"
                 dangerouslySetInnerHTML={{
                   __html: `
