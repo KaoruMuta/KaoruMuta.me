@@ -1,7 +1,7 @@
-import { InferGetStaticPropsType, NextPage } from 'next';
 import Gallery from 'components/Gallery';
 import Title from 'components/Title';
 import { loadAllCategories, loadSortedPostsForCategoryByDate } from 'lib/posts';
+import { InferGetStaticPropsType, NextPage } from 'next';
 
 export const getStaticProps = async ({ params }: { params: { category: string } }) => {
   const posts = loadSortedPostsForCategoryByDate(params.category);
