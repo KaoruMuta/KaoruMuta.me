@@ -1,6 +1,5 @@
 import { GOOGLE_ANALYTICS_ID } from 'lib/gtag';
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -15,14 +14,9 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           {GOOGLE_ANALYTICS_ID && (
             <>
-              <Script
-                id="gtag-manager"
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
-              />
-              <Script
+              <script id="gtag-manager" src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
+              <script
                 id="gtag-script"
-                strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `
                     window.dataLayer = window.dataLayer || [];
@@ -36,7 +30,7 @@ class MyDocument extends Document {
               />
             </>
           )}
-          <Script
+          <script
             data-ad-client={`${process.env.GOOGLE_ADSENSE_CLIENT_ID}`}
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
