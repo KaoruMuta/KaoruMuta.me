@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
 import Title from 'components/Title';
 import { AppConstants } from 'constants/AppConstants';
+import { NextPage } from 'next';
+import Head from 'next/head';
 
 const Privacy: NextPage = () => {
   return (

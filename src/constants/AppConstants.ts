@@ -12,12 +12,14 @@ export namespace AppConstants {
   export namespace HomePage {
     export const NAME = 'Home';
     export const TITLE = 'KaoruMuta.me.';
+    export const CONTENT = 'Personal website hosted by Kaoru Muta.';
     export const PATH = '/';
   }
 
   export namespace BlogPage {
     export const NAME = 'Blog';
     export const TITLE = 'tionblog';
+    export const CONTENT = 'tionblogへようこそ。技術のアウトプットだけでなく、日々の備忘録も残しています。';
     export const PATH = '/blog';
   }
 

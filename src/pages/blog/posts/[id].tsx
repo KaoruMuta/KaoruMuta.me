@@ -1,12 +1,12 @@
-import { InferGetStaticPropsType, NextPage } from 'next';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import Prism from 'prismjs';
-import Title from 'components/Title';
+import Ads from 'components/Ads';
 import Description from 'components/Description';
 import Share from 'components/Share';
-import Ads from 'components/Ads';
+import Title from 'components/Title';
 import { loadAllPostIds, loadPostById } from 'lib/posts';
+import { InferGetStaticPropsType, NextPage } from 'next';
+import Head from 'next/head';
+import Prism from 'prismjs';
+import { useEffect } from 'react';
 
 export const getStaticProps = async ({ params }: { params: { id: string } }) => {
   const post = loadPostById(params.id);
