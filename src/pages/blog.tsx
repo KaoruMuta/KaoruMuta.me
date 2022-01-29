@@ -18,6 +18,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ allSor
   return (
     <>
       <Head>
+        <meta name="description" content={AppConstants.BlogPage.CONTENT} />
         <title>{AppConstants.BlogPage.TITLE}</title>
       </Head>
       <section className="divide-y my-16">

@@ -7,6 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <meta name="description" content={AppConstants.HomePage.CONTENT} />
         <title>{AppConstants.HomePage.TITLE}</title>
       </Head>
       <Profile />
