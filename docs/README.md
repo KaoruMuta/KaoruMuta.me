@@ -48,6 +48,7 @@ Please feel free to ask! (Of course, you can use any languages.)
 - typescript
 - prism.js
 - babel-plugin-prismjs
+- next-sitemap
 
 </details>
 
@@ -67,6 +68,7 @@ Please feel free to ask! (Of course, you can use any languages.)
 - https://sunday-morning.app/posts/2020-12-15-next-js-prism-js-syntax-highlight
 - https://b.0218.jp/202104021830.html
 - https://imatomix.com/imatomix/notes/1637308371772
+- https://fwywd.com/tech/next-sitemap
 
 </details>
 
