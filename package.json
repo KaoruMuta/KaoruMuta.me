@@ -8,7 +8,8 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write **/*.{js,ts,tsx,json,css,md}"
+    "format": "prettier --write **/*.{js,ts,tsx,json,css,md}",
+    "test": "jest --watch --coverage"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
@@ -27,12 +28,16 @@
     "react-share": "^4.4.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
     "@types/node": "^17.0.25",
     "@types/react": "18.0.6",
     "autoprefixer": "^10.4.5",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "next-sitemap": "^2.5.20",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
