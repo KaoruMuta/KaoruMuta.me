@@ -3,12 +3,17 @@ on: [push]
 
 jobs:
   build:
+    name: Build applications and execute unittest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Node setup and load cache if it exists
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn test
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Execute unittest
+        run: yarn test
