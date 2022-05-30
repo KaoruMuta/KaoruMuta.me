@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write **/*.{js,ts,tsx,json,css,md}",
-    "test": "jest --watch --coverage"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
