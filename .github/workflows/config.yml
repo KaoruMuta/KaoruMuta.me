@@ -2,8 +2,7 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-    name: Build applications and execute unittest
+  jest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
