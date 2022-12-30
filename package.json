@@ -1,6 +1,6 @@
 {
   "name": "mysite",
-  "version": "0.1.0",
+  "version": "1.1.22",
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
@@ -12,20 +12,20 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "@types/gtag.js": "^0.0.10",
-    "@types/marked": "^4.0.3",
+    "@tailwindcss/typography": "^0.5.8",
+    "@types/gtag.js": "^0.0.12",
+    "@types/marked": "^4.0.8",
     "@types/prismjs": "^1.16.6",
     "ansi-regex": "6.0.1",
     "babel-plugin-prismjs": "^2.1.0",
     "gray-matter": "^4.0.3",
-    "marked": "^4.0.14",
-    "next": "12.1.5",
-    "prismjs": "^1.28.0",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-icons": "^4.2.0",
-    "react-share": "^4.4.0"
+    "marked": "^4.2.5",
+    "next": "13.1.1",
+    "prismjs": "^1.29.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-share": "^4.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
