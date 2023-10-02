@@ -10,17 +10,17 @@ const LinkButton = ({
   name: string;
 }) => {
   return (
-    <Link href={destination}>
-      <a
-        className={
-          isHighlighted
-            ? 'border-b border-black xl:hover:opacity-hover'
-            : 'border-b border-white xl:hover:opacity-hover'
-        }
-      >
-        {name}
-      </a>
-    </Link>
+    (<Link
+      href={destination}
+      className={
+        isHighlighted
+          ? 'border-b border-black xl:hover:opacity-hover'
+          : 'border-b border-white xl:hover:opacity-hover'
+      }>
+
+      {name}
+
+    </Link>)
   );
 };
 
