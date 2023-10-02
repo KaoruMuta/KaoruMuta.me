@@ -7,6 +7,7 @@ import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
+import { PostPropsType } from 'types/PostPropsType';
 
 export const getStaticProps = async ({ params }: { params: { id: string } }) => {
   const post = loadPostById(params.id);
@@ -26,30 +27,31 @@ export const getStaticPaths = async () => {
 };
 
 const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }) => {
-  const { id, title, content, date, categories } = post;
-  const url = `${process.env.HOST}/blog/posts/${id}`;
-
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <article className="my-16 break-all">
-        <Title name={title} />
-        <Description date={date} categories={categories} />
-        <hr className="mt-4"></hr>
-        <article
-          className="py-4 max-w-none prose prose-indigo xl:prose-lg"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-        <hr className="mb-4"></hr>
-        <Share url={url} title={title} />
-        <Ads />
-      </article>
+      {post && (
+        <>
+          <Head>
+            <title>{post.title}</title>
+          </Head>
+          <article className="my-16 break-all">
+            <Title name={post.title} />
+            <Description date={post.date} categories={post.categories} />
+            <hr className="mt-4"></hr>
+            <article
+              className="py-4 max-w-none prose prose-indigo xl:prose-lg"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+            <hr className="mb-4"></hr>
+            <Share url={`${process.env.HOST}/blog/posts/${post.id}`} title={post.title} />
+            <Ads />
+          </article>
+        </>
+      )}
     </>
   );
 };
