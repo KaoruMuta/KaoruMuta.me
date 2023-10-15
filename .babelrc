@@ -29,7 +29,8 @@
                     "swift",
                     "typescript",
                     "vim",
-                    "yaml"
+                    "yaml",
+                    "java"
                 ],
                 "plugins": [
                     "line-numbers",
