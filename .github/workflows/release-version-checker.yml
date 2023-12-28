@@ -8,14 +8,21 @@ jobs:
   release-version-checker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout "${{ github.base_ref }}"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+          ref: ${{ github.base_ref }}
+      - name: Checkout "${{ github.head_ref }}"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ github.head_ref }}
       - name: Check version updates
+        shell: bash
         run: |
-          git diff main...HEAD -- package.json | grep '\"version\": '
-          diff=`git diff main...HEAD -- package.json | grep '\"version\": ' | wc -l`
+          git diff origin/${{ github.base_ref }} -- package.json | grep '\"version\": '
+          diff=`git diff origin/${{ github.base_ref }} -- package.json | grep '\"version\": ' | wc -l`
           if [ $diff != 0 ]; then
             exit 1
           else
