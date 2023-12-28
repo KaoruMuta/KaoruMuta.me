@@ -12,8 +12,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Check version updates
         run: |
-          git diff -- package.json | grep '\"version\": '
-          diff=$(git diff -- package.json | grep '\"version\": ' | wc -l)
+          git diff main..HEAD -- package.json | grep '\"version\": '
+          diff=$(git diff main..HEAD -- package.json | grep '\"version\": ' | wc -l)
           if [ $diff != 0]; then
             exit 1
           else
