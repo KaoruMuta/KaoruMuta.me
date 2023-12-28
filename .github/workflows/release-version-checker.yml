@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  ci:
+  release-version-checker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,7 +15,7 @@ jobs:
       - name: Check version updates
         run: |
           git diff main...HEAD -- package.json | grep '\"version\": '
-          diff=$(git diff main...HEAD -- package.json | grep '\"version\": ' | wc -l)
+          diff=`git diff main...HEAD -- package.json | grep '\"version\": ' | wc -l`
           if [ $diff != 0 ]; then
             exit 1
           else
