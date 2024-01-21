@@ -9,31 +9,23 @@ const POST_BASE_DIR = path.join(process.cwd(), 'posts');
 
 const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   const resources = fs.readdirSync(directoryPath, { encoding: 'utf-8', withFileTypes: true, recursive: true });
-  const allPosts = resources
+  return resources
     .filter((resource) => resource.isFile())
     .map((file) => {
       const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
+      const postId = file.name.replace(/.md$/, '');
       const displayedCategories = categories !== undefined || !categories.length ? categories.split(' ') : [];
-
       return {
+        id: postId,
         title: title,
         content: marked(matterResult.content),
         date: formatDate(date),
         categories: displayedCategories,
       };
     })
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .map((post, index) => {
-      const postId = (index + 1).toString();
-      return {
-        id: postId,
-        ...post,
-      };
-    });
-
-  return allPosts;
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 };
 
 export const loadAllSortedPostsByDate = () => {
