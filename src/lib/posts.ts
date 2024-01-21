@@ -8,11 +8,11 @@ import { formatDate } from './date';
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 const loadAllPosts = (directoryPath: string): PostPropsType[] => {
-  const fileNames = fs.readdirSync(directoryPath);
-  const allPosts = fileNames
-    .map((fileName) => {
-      const fullPostPath = path.join(postsDirectory, fileName);
-      const postContents = fs.readFileSync(fullPostPath, 'utf-8');
+  const resources = fs.readdirSync(directoryPath, { encoding: 'utf-8', withFileTypes: true, recursive: true });
+  const allPosts = resources
+    .filter((resource) => resource.isFile())
+    .map((file) => {
+      const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
       const contentHtml = marked(matterResult.content);
