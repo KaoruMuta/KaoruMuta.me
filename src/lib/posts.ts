@@ -5,7 +5,7 @@ import path from 'path';
 import { PostPropsType } from 'types/PostPropsType';
 import { formatDate } from './date';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+const POST_BASE_DIR = path.join(process.cwd(), 'posts');
 
 const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   const resources = fs.readdirSync(directoryPath, { encoding: 'utf-8', withFileTypes: true, recursive: true });
@@ -15,15 +15,13 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
       const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
-      const contentHtml = marked(matterResult.content);
-      const formattedDate = formatDate(date);
-      const categoryList = categories !== undefined || !categories.length ? categories.split(' ') : [];
+      const displayedCategories = categories !== undefined || !categories.length ? categories.split(' ') : [];
 
       return {
         title: title,
-        content: contentHtml,
-        date: formattedDate,
-        categories: categoryList,
+        content: marked(matterResult.content),
+        date: formatDate(date),
+        categories: displayedCategories,
       };
     })
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
@@ -39,12 +37,12 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
 };
 
 export const loadAllSortedPostsByDate = () => {
-  const allPosts = loadAllPosts(postsDirectory);
+  const allPosts = loadAllPosts(POST_BASE_DIR);
   return allPosts.reverse();
 };
 
 export const loadAllPostIds = () => {
-  const allPosts = loadAllPosts(postsDirectory);
+  const allPosts = loadAllPosts(POST_BASE_DIR);
 
   return allPosts.map((post) => {
     return {
@@ -56,12 +54,12 @@ export const loadAllPostIds = () => {
 };
 
 export const loadPostById = (id: string) => {
-  const allPosts = loadAllPosts(postsDirectory);
+  const allPosts = loadAllPosts(POST_BASE_DIR);
   return allPosts.find((post) => post.id === id);
 };
 
 export const loadAllCategories = () => {
-  const allPosts = loadAllPosts(postsDirectory);
+  const allPosts = loadAllPosts(POST_BASE_DIR);
   const allCategories = allPosts.flatMap((post) => post.categories);
   const allUniqueCategories = Array.from(new Set(allCategories));
 
