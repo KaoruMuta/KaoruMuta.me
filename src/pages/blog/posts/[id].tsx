@@ -7,7 +7,6 @@ import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
-import { PostPropsType } from 'types/PostPropsType';
 
 export const getStaticProps = async ({ params }: { params: { id: string } }) => {
   const post = loadPostById(params.id);
