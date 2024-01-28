@@ -14,10 +14,10 @@ jobs:
           cache: 'yarn'
       - name: Validate blog post name
         run: |
-          TOTAL_POST_COUNT=$(ls posts/**/*.md | xargs -n1 basename)
+          TOTAL_POST_COUNT=$(ls -l posts/**/*.md | wc -l)
           VALIDATED_POST_COUNT=$(ls posts/**/*.md | xargs -n1 basename | grep -cE '^[0-9]{8,}-')
           if [ $TOTAL_POST_COUNT != $VALIDATED_POST_COUNT ]; then
-            echo ""
+            echo "Some blog post names are not followed by name format: yyyyMMdd-{ANY_STRING}"
             echo "TOTAL_POST_COUNT=$TOTAL_POST_COUNT VALIDATED_POST_COUNT=$VALIDATED_POST_COUNT"
             exit 1
           fi
