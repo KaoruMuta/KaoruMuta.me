@@ -12,6 +12,15 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
+      - name: Validate blog post name
+        run: |
+          TOTAL_POST_COUNT=$(ls posts/**/*.md | xargs -n1 basename)
+          VALIDATED_POST_COUNT=$(ls posts/**/*.md | xargs -n1 basename | grep -cE '^[0-9]{8,}-')
+          if [ $TOTAL_POST_COUNT != $VALIDATED_POST_COUNT ]; then
+            echo ""
+            echo "TOTAL_POST_COUNT=$TOTAL_POST_COUNT VALIDATED_POST_COUNT=$VALIDATED_POST_COUNT"
+            exit 1
+          fi
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Execute unittest
