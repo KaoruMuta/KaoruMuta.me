@@ -1,7 +1,7 @@
 name: Release version checker
-on: 
+on:
   pull_request:
-    branches: 
+    branches:
       - main
 
 jobs:
