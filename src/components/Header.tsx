@@ -1,6 +1,6 @@
 import { AppConstants } from 'constants/AppConstants';
+import { EmergencyExitIcon } from 'icons/emergency-exit';
 import Link from 'next/link';
-import { FcApproval } from 'react-icons/fc';
 import LinkButton from './LinkButton';
 
 const Header = ({ currentPath }: { currentPath: string }) => {
@@ -8,10 +8,10 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     <header>
       <nav className="flex items-start font-semibold pt-8 space-x-4 xl:space-x-8">
         <span className="inline-flex flex-1 items-center">
-          <Link href={AppConstants.HomePage.PATH} className="xl:hover:opacity-hover">
+          <Link href={AppConstants.HomePage.PATH} className="xl:hover:opacity-hover mr-1">
             {AppConstants.HomePage.TITLE}
           </Link>
-          <FcApproval className="ml-1" />
+          <EmergencyExitIcon />
         </span>
         <LinkButton
           destination={AppConstants.HomePage.PATH}
