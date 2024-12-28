@@ -16,7 +16,7 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
       const postId = file.name.replace(/^[0-9]{8,}-(.*)\.md$/, '$1');
-      const displayedCategories = categories !== undefined || !categories.length ? categories.split(' ') : [];
+      const displayedCategories = categories == null || !categories.length ? [] : categories.split(' ');
       return {
         id: postId,
         title: title,
