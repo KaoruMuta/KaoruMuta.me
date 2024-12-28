@@ -15,7 +15,7 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
       const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
-      const postId = file.name.replace(/^[0-9]{8,}-|\.md$/, '');
+      const postId = file.name.replace(/^[0-9]{8,}-(.*)\.md$/, '$1');
       const displayedCategories = categories !== undefined || !categories.length ? categories.split(' ') : [];
       return {
         id: postId,
