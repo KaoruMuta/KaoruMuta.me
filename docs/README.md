@@ -6,17 +6,17 @@ All pages are based on [Next.js](https://nextjs.org/).
 ## How to run at local
 
 1. Clone this repository
-2. (Optional) Install `npm` and `yarn`
+2. (Optional) Install [Bun](https://bun.sh/)
 3. To install dependencies in the project, execute this on the project root:
 
 ```bash
-yarn install
+bun install
 ```
 
 4. To run the development server, execute this on the project root:
 
 ```bash
-yarn dev
+bun dev
 ```
 
 ## How to provide your opinion in this website
