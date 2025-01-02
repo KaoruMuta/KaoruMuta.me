@@ -1,7 +1,7 @@
 ---
-title: SwiftUI+Golang+Heroku Postgresで遊んでみた感想と知見
+title: SwiftUI+Go+Heroku Postgresで遊んでみた感想と知見
 date: 2022-01-16 19:33
-categories: 技術 iOS SwiftUI Golang PostgreSQL Heroku
+categories: 技術 iOS SwiftUI Go PostgreSQL Heroku
 ---
 
 ## はじめに
@@ -25,7 +25,7 @@ categories: 技術 iOS SwiftUI Golang PostgreSQL Heroku
 技術は以下の通りです。採用理由は**自分が使いたかったから**！！（結局興味があったりモチベが出るものが一番いいのよ個人開発は）
 
 - Client (app): SwiftUI+Combine
-- Server: Golang(フレームワーク: gin)
+- Server: Go(フレームワーク: gin)
 - DB: Heroku Postgres
 
 バックエンド側は Heroku フル活用で事足りるはずなので使わせてもらって、アプリ側は久々 SwiftUI で書きました
@@ -86,7 +86,7 @@ NavigationLink(destination: QuizView(words: viewModel.words), isActive: $shouldS
 
 ### Heroku デプロイで`app not compatible with buildpack` (Go 編)
 
-以下コマンドで go のバージョンとモジュールの依存関係を記した`go.mod`を作成し、デプロイしてあげて解決。([参考](https://stackoverflow.com/questions/48841627/cant-push-simple-golang-project-to-heroku))
+以下コマンドで Go のバージョンとモジュールの依存関係を記した`go.mod`を作成し、デプロイしてあげて解決。([参考](https://stackoverflow.com/questions/48841627/cant-push-simple-golang-project-to-heroku))
 
 ```go
 go mod init {GIT_REPOSITORY_URL}
