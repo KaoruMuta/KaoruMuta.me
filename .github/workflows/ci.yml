@@ -7,11 +7,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Node setup and load cache if it exists
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'yarn'
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
       - name: Validate blog post name
         run: |
           TOTAL_POST_COUNT=$(ls -l posts/**/*.md | wc -l)
@@ -25,6 +22,6 @@ jobs:
             exit 1
           fi
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       - name: Execute unittest
-        run: yarn test
+        run: bun test
