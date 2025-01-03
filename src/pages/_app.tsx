@@ -21,7 +21,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Layout currentPath={router.asPath}>
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </>
