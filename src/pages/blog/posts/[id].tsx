@@ -40,12 +40,12 @@ const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }
           <article className="my-16 break-all">
             <PageTitle name={post.title} />
             <Description date={post.date} categories={post.categories} />
-            <hr className="mt-4"></hr>
+            <hr className="mt-4" />
             <article
               className="py-4 max-w-none prose prose-indigo xl:prose-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
-            <hr className="mb-4"></hr>
+            <hr className="mb-4" />
             <Share url={`${process.env.HOST}/blog/posts/${post.id}`} title={post.title} />
             <Ads />
           </article>

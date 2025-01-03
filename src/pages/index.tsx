@@ -23,8 +23,9 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ allSor
         />
         <title>tionblog</title>
       </Head>
-      <section className="divide-y my-16">
+      <section className="my-16">
         <PageTitle name="tionblog" />
+        <hr className="mt-4" />
         <BlogPostList posts={allSortedPostsByDate} />
       </section>
     </>
