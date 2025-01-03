@@ -3,15 +3,15 @@ import {
   FacebookShareButton,
   HatenaIcon,
   HatenaShareButton,
-  TwitterIcon,
   TwitterShareButton,
+  XIcon,
 } from 'react-share';
 
 const Share = ({ url, title }: { url: string; title: string }) => {
   return (
     <section className="flex space-x-2">
       <TwitterShareButton url={url} title={title} hashtags={['tionblog']}>
-        <TwitterIcon size={32} round={true} />
+        <XIcon size={32} round={true} />
       </TwitterShareButton>
       <FacebookShareButton url={url}>
         <FacebookIcon size={32} round={true} />
