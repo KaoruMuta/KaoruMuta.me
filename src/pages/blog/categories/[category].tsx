@@ -28,8 +28,9 @@ const Category: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ca
       <Head>
         <title>{category}</title>
       </Head>
-      <section className="divide-y my-16">
+      <section className="my-16">
         <PageTitle name={`# ${category}`} />
+        <hr className="mt-4" />
         <BlogPostList posts={posts} />
       </section>
     </>
