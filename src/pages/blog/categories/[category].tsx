@@ -1,5 +1,5 @@
-import Gallery from 'components/Gallery';
-import Title from 'components/Title';
+import BlogPostList from 'components/BlogPostList';
+import PageTitle from 'components/PageTitle';
 import { loadAllCategories, loadSortedPostsForCategoryByDate } from 'lib/posts';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
@@ -28,9 +28,10 @@ const Category: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ ca
       <Head>
         <title>{category}</title>
       </Head>
-      <section className="divide-y my-16">
-        <Title name={`# ${category}`} />
-        <Gallery posts={posts} />
+      <section className="my-16">
+        <PageTitle name={`# ${category}`} />
+        <hr className="mt-4" />
+        <BlogPostList posts={posts} />
       </section>
     </>
   );

@@ -20,11 +20,9 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   }, [router.events]);
 
   return (
-    <>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 export default MyApp;
