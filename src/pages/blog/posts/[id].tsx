@@ -1,7 +1,7 @@
 import Ads from 'components/Ads';
 import Description from 'components/Description';
+import PageTitle from 'components/PageTitle';
 import Share from 'components/Share';
-import Title from 'components/Title';
 import { loadAllPostIds, loadPostById } from 'lib/posts';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
@@ -38,7 +38,7 @@ const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }
             <title>{post.title}</title>
           </Head>
           <article className="my-16 break-all">
-            <Title name={post.title} />
+            <PageTitle name={post.title} />
             <Description date={post.date} categories={post.categories} />
             <hr className="mt-4"></hr>
             <article

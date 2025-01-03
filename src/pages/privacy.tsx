@@ -1,4 +1,4 @@
-import Title from 'components/Title';
+import PageTitle from 'components/PageTitle';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -9,7 +9,7 @@ const Privacy: NextPage = () => {
         <title>Privacy Policy</title>
       </Head>
       <article className="prose prose-indigo max-w-none my-16">
-        <Title name="Privacy Policy" />
+        <PageTitle name="Privacy Policy" />
         <h2>個人情報の利用目的</h2>
         <p>
           当サイトでは、お問い合わせの際、名前やメールアドレス等の個人情報を取得することがあります。
