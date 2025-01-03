@@ -1,4 +1,4 @@
-import Gallery from 'components/Gallery';
+import BlogPostList from 'components/BlogPostList';
 import Title from 'components/Title';
 import { loadAllSortedPostsByDate } from 'lib/posts';
 import { InferGetStaticPropsType, NextPage } from 'next';
@@ -25,7 +25,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ allSor
       </Head>
       <section className="divide-y my-16">
         <Title name="tionblog" />
-        <Gallery posts={allSortedPostsByDate} />
+        <BlogPostList posts={allSortedPostsByDate} />
       </section>
     </>
   );

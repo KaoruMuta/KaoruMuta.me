@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PostPropsType } from 'types/PostPropsType';
 import Description from './Description';
 
-const Gallery = ({ posts }: { posts: PostPropsType[] }) => {
+const BlogPostList = ({ posts }: { posts: PostPropsType[] }) => {
   return (
     <>
       {posts.map((post) => {
@@ -20,4 +20,4 @@ const Gallery = ({ posts }: { posts: PostPropsType[] }) => {
   );
 };
 
-export default Gallery;
+export default BlogPostList;
