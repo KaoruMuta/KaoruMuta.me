@@ -12,7 +12,7 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   return resources
     .filter((resource) => resource.isFile())
     .map((file) => {
-      const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
+      const postContents = fs.readFileSync(path.join(directoryPath, file.name), 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
       const postId = file.name.replace(/^[0-9]{8,}-(.*)\.md$/, '$1');
@@ -37,11 +37,7 @@ export const loadAllPostIds = () => {
   const allPosts = loadAllPosts(POST_BASE_DIR);
 
   return allPosts.map((post) => {
-    return {
-      params: {
-        id: post.id,
-      },
-    };
+    return { params: { id: post.id } };
   });
 };
 
@@ -56,11 +52,7 @@ export const loadAllCategories = () => {
   const allUniqueCategories = Array.from(new Set(allCategories));
 
   return allUniqueCategories.map((category) => {
-    return {
-      params: {
-        category: category,
-      },
-    };
+    return { params: { category: category } };
   });
 };
 
