@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { formatDate } from './date';
 
 describe('formatDate', () => {
@@ -37,6 +38,10 @@ describe('formatDate', () => {
 
     expect(formatDate('2022-12-01')).toEqual('2022年12月1日');
     expect(formatDate('2022-12-31')).toEqual('2022年12月31日');
+  });
+
+  it('should return valid date string when the input value includes time', () => {
+    expect(formatDate('2025-12-31 20:00')).toEqual('2025年12月31日');
   });
 
   it('should return valid date string when the input year is leap year', () => {

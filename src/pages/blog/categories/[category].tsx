@@ -1,8 +1,8 @@
-import BlogPostList from 'components/BlogPostList';
-import PageTitle from 'components/PageTitle';
-import { loadAllCategories, loadSortedPostsForCategoryByDate } from 'lib/posts';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import BlogPostList from '../../../components/BlogPostList';
+import PageTitle from '../../../components/PageTitle';
+import { loadAllCategories, loadSortedPostsForCategoryByDate } from '../../../lib/posts';
 
 export const getStaticProps = async ({ params }: { params: { category: string } }) => {
   const posts = loadSortedPostsForCategoryByDate(params.category);

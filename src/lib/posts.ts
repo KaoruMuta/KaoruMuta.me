@@ -2,35 +2,33 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import path from 'path';
-import { PostPropsType } from 'types/PostPropsType';
-import { formatDate } from './date';
+import { PostPropsType } from '../types/PostPropsType';
 
 const POST_BASE_DIR = path.join(process.cwd(), 'posts');
 
 const loadAllPosts = (directoryPath: string): PostPropsType[] => {
-  const resources = fs.readdirSync(directoryPath, { encoding: 'utf-8', withFileTypes: true, recursive: true });
-  return resources
-    .filter((resource) => resource.isFile())
-    .map((file) => {
-      const postContents = fs.readFileSync(`${file.path}/${file.name}`, 'utf-8');
+  return fs
+    .readdirSync(directoryPath, { encoding: 'utf-8', recursive: true })
+    .sort((a, b) => a.localeCompare(b))
+    .filter((filePath) => fs.statSync(path.join(directoryPath, filePath)).isFile())
+    .map((filePath) => {
+      const postContents = fs.readFileSync(path.join(directoryPath, filePath), 'utf-8');
       const matterResult = matter(postContents);
       const { title, date, categories } = matterResult.data;
-      const postId = file.name.replace(/^[0-9]{8,}-(.*)\.md$/, '$1');
+      const postId = path.basename(filePath).replace(/^[0-9]{8,}-(.*)\.md$/, '$1');
       const displayedCategories = categories == null || !categories.length ? [] : categories.split(' ');
       return {
         id: postId,
         title: title,
         content: marked(matterResult.content),
-        date: formatDate(date),
+        date: date,
         categories: displayedCategories,
       };
-    })
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    });
 };
 
 export const loadAllSortedPostsByDate = () => {
-  const allPosts = loadAllPosts(POST_BASE_DIR);
-  return allPosts.reverse();
+  return loadAllPosts(POST_BASE_DIR).sort((a, b) => b.date.localeCompare(a.date));
 };
 
 export const loadAllPostIds = () => {

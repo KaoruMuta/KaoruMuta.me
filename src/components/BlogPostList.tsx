@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { PostPropsType } from 'types/PostPropsType';
+import { Fragment } from 'react';
+import { PostPropsType } from '../types/PostPropsType';
 import Description from './Description';
 
 const BlogPostList = ({ posts }: { posts: PostPropsType[] }) => {
@@ -8,15 +9,15 @@ const BlogPostList = ({ posts }: { posts: PostPropsType[] }) => {
       {posts.map((post) => {
         const { id, title, date, categories } = post;
         return (
-          <>
-            <section className="py-4" key={id}>
+          <Fragment key={id}>
+            <section className="py-4">
               <Link href={`/blog/posts/${id}`}>
                 <h2 className="font-semibold text-xl xl:text-2xl xl:hover:opacity-hover">{title}</h2>
               </Link>
               <Description date={date} categories={categories} />
             </section>
             <hr />
-          </>
+          </Fragment>
         );
       })}
     </>
