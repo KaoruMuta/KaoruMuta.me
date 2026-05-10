@@ -9,6 +9,7 @@ const POST_BASE_DIR = path.join(process.cwd(), 'posts');
 const loadAllPosts = (directoryPath: string): PostPropsType[] => {
   return fs
     .readdirSync(directoryPath, { encoding: 'utf-8', recursive: true })
+    .sort((a, b) => a.localeCompare(b))
     .filter((filePath) => fs.statSync(path.join(directoryPath, filePath)).isFile())
     .map((filePath) => {
       const postContents = fs.readFileSync(path.join(directoryPath, filePath), 'utf-8');
