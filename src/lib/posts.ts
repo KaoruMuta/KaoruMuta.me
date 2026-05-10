@@ -20,14 +20,14 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
         id: postId,
         title: title,
         content: marked(matterResult.content),
-        date: Number(date.slice(0, 10).replace(/-/g, '')),
+        date: date,
         categories: displayedCategories,
       };
     });
 };
 
 export const loadAllSortedPostsByDate = () => {
-  return loadAllPosts(POST_BASE_DIR).sort((a, b) => b.date - a.date);
+  return loadAllPosts(POST_BASE_DIR).sort((a, b) => b.date.localeCompare(a.date));
 };
 
 export const loadAllPostIds = () => {

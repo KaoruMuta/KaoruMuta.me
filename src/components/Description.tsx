@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FaTags } from 'react-icons/fa';
 import { formatDate } from '../lib/date';
 
-const Description = ({ date, categories }: { date: number; categories: string[] }) => {
+const Description = ({ date, categories }: { date: string; categories: string[] }) => {
   return (
     <section className="flex flex-col items-start mt-2 xl:flex-row">
       <time className="block flex-1 text-sm">{`${formatDate(date)}に投稿`}</time>
