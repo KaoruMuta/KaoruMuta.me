@@ -20,7 +20,7 @@ const loadAllPosts = (directoryPath: string): PostPropsType[] => {
         id: postId,
         title: title,
         content: marked(matterResult.content),
-        date: new Date(date.replace(/-/g, '/')).getTime(),
+        date: Number(date.slice(0, 10).replace(/-/g, '')),
         categories: displayedCategories,
       };
     });
