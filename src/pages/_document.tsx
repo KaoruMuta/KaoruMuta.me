@@ -1,5 +1,5 @@
-import { GOOGLE_ANALYTICS_ID } from 'lib/gtag';
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import { GOOGLE_ANALYTICS_ID } from '../lib/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

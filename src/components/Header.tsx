@@ -1,5 +1,5 @@
-import { EmergencyExitIcon } from 'icons/emergency-exit';
 import Link from 'next/link';
+import { EmergencyExitIcon } from '../icons/emergency-exit';
 
 const Header = () => {
   return (

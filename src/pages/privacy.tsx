@@ -1,6 +1,6 @@
-import PageTitle from 'components/PageTitle';
 import { NextPage } from 'next';
 import Head from 'next/head';
+import PageTitle from '../components/PageTitle';
 
 const Privacy: NextPage = () => {
   return (

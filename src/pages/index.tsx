@@ -1,8 +1,8 @@
-import BlogPostList from 'components/BlogPostList';
-import PageTitle from 'components/PageTitle';
-import { loadAllSortedPostsByDate } from 'lib/posts';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import BlogPostList from '../components/BlogPostList';
+import PageTitle from '../components/PageTitle';
+import { loadAllSortedPostsByDate } from '../lib/posts';
 
 export const getStaticProps = async () => {
   const allSortedPostsByDate = loadAllSortedPostsByDate();
