@@ -6,7 +6,7 @@ const Layout = ({ children }: { children?: ReactNode }) => {
   return (
     <section id="layoutContainer" className="flex flex-col font-sans mx-4 sm:mx-16 md:mx-56 h-screen">
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main className="grow">{children}</main>
       <Footer />
     </section>
   );
