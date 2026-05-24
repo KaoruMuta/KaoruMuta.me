@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@layer base {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}

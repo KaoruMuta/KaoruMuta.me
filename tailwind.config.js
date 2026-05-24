@@ -1,9 +1,5 @@
-const plugin = require('tailwindcss/plugin');
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -25,9 +21,6 @@ module.exports = {
         },
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
 };

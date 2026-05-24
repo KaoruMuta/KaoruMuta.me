@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import 'prismjs/themes/prism-okaidia.css';
 import { useEffect } from 'react';
-import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 import Layout from '../components/Layout';
 import { pageview } from '../lib/gtag';
 
