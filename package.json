@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write **/*.{js,ts,tsx,json,css,md}",
+    "ogp:generate": "node scripts/generate-ogp.mjs",
     "test": "jest --coverage"
   },
   "dependencies": {

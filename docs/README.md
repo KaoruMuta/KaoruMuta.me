@@ -19,6 +19,28 @@ bun install
 bun dev
 ```
 
+## How to generate OGP images
+
+OGP images are generated from blog post frontmatter titles.
+Run this after adding or renaming a blog post:
+
+```bash
+bun run ogp:generate
+```
+
+To regenerate only one post image, pass the post id:
+
+```bash
+bun run ogp:generate -- --id look-back-2025
+```
+
+This script requires `rsvg-convert`.
+If it is installed in a custom location, set `RSVG_CONVERT`:
+
+```bash
+RSVG_CONVERT=/path/to/rsvg-convert bun run ogp:generate
+```
+
 ## How to provide your opinion in this website
 
 When you would like to provide your opinion in this website, **please post the detail as one of the issues from GitHub Issue tab.**
