@@ -9,14 +9,15 @@ Next.js で構築された個人ブログサイト。旅行体験、留学記録
 - **スタイリング**: Tailwind CSS 3.4.17
 - **コンテンツ**: Markdown ファイル（gray-matter frontmatter）
 - **テスト**: Jest 30.4.2 + Testing Library
-- **ランタイム**: Node.js 20.10.0（mise 管理）
+- **ランタイム**: Node.js 26.5.0（mise 管理）
+- **パッケージマネージャー**: pnpm 11.14.0（mise 管理）
 
 ## 開発コマンド
-- `npm run dev` - 開発サーバー起動（デバッグ付き）
-- `npm run build` - 本番用ビルド
-- `npm run lint` - ESLint 実行
-- `npm run format` - Prettier でコード整形
-- `npm run test` - Jest テスト実行（カバレッジ付き）
+- `pnpm dev` - 開発サーバー起動（デバッグ付き）
+- `pnpm build` - 本番用ビルド
+- `pnpm lint` - ESLint 実行
+- `pnpm format` - Prettier でコード整形
+- `pnpm test` - Jest テスト実行（カバレッジ付き）
 
 ## プロジェクト構成
 - `src/pages/` - Next.js ページ・API ルート
