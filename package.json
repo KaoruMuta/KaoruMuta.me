@@ -46,8 +46,5 @@
     "prettier-plugin-organize-imports": "4.3.0",
     "tailwindcss": "4.1.13",
     "typescript": "6.0.3"
-  },
-  "volta": {
-    "node": "20.10.0"
   }
 }

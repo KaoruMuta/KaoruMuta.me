@@ -9,7 +9,7 @@ Next.js で構築された個人ブログサイト。旅行体験、留学記録
 - **スタイリング**: Tailwind CSS 3.4.17
 - **コンテンツ**: Markdown ファイル（gray-matter frontmatter）
 - **テスト**: Jest 30.4.2 + Testing Library
-- **ランタイム**: Node.js 20.10.0（Volta 管理）
+- **ランタイム**: Node.js 20.10.0（mise 管理）
 
 ## 開発コマンド
 - `npm run dev` - 開発サーバー起動（デバッグ付き）
