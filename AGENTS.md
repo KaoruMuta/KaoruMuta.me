@@ -1,61 +1,49 @@
 # AGENTS.md
 
-## プロジェクト概要
-Next.js で構築された個人ブログサイト。旅行体験、留学記録、技術書レビューを掲載する。
+## Project Overview
+A personal blog built with Next.js, covering travel experiences, study-abroad records, and tech book reviews.
 
-## 技術スタック
-- **フレームワーク**: Next.js 16.2.6 + React 19.2.6
-- **言語**: TypeScript 6.0.3
-- **スタイリング**: Tailwind CSS 3.4.17
-- **コンテンツ**: Markdown ファイル（gray-matter frontmatter）
-- **テスト**: Jest 30.4.2 + Testing Library
-- **ランタイム**: Node.js 26.5.0（mise 管理）
-- **パッケージマネージャー**: Bun 1.3.14（mise 管理）
+## Tech Stack
+- **Framework**: Next.js (Pages Router) + React
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Content**: Markdown files with gray-matter frontmatter
+- **Testing**: Jest + Testing Library
+- **Runtime & package manager**: Node.js + Bun, managed via mise (see `mise.toml` for pinned versions)
 
-## 開発コマンド
-- `bun run dev` - 開発サーバー起動（デバッグ付き）
-- `bun run build` - 本番用ビルド
-- `bun run lint` - ESLint 実行
-- `bun run format` - Prettier でコード整形
-- `bun run test` - Jest テスト実行（カバレッジ付き）
+## Development Commands
+- `bun run dev` - start the dev server (with debugger attached)
+- `bun run build` - production build
+- `bun run lint` - run ESLint
+- `bun run format` - format code with Prettier
+- `bun run test` - run Jest tests with coverage
 
-## プロジェクト構成
-- `src/pages/` - Next.js ページ・API ルート
-- `src/components/` - 再利用可能な React コンポーネント
-- `src/lib/` - ユーティリティ関数・ヘルパー
-- `posts/` - 年別整理された Markdown ブログ記事
-- `public/posts/` - ブログ記事用静的アセット
+## Project Structure
+- `src/pages/` - Next.js pages and API routes
+- `src/components/` - reusable React components
+- `src/lib/` - utility functions and helpers
+- `posts/` - Markdown blog posts organized by year
+- `public/posts/` - static assets for blog posts
 
-## コンテンツ管理
-- ブログ記事は frontmatter メタデータ付き Markdown ファイルで管理する
-- 画像は `public/posts/` に年別で保存する
-- カテゴリは frontmatter タグで管理する
+## Content Management
+- Blog posts are managed as Markdown files with frontmatter metadata
+- Images are stored under `public/posts/`, organized by year
+- Categories are managed via frontmatter tags
 
-## 開発ガイドライン
-- 既存の TypeScript・ESLint 設定に従う
-- スタイリングは Tailwind CSS を使用し、既存のユーティリティクラスを優先する
-- 新機能や振る舞いを変える修正には、必要に応じて Jest のテストを追加・更新する
-- 既存のレスポンシブデザインパターンを維持する
-- SEO・パフォーマンスについて Next.js のベストプラクティスに従う
-- 既存のユーザー変更を勝手に巻き戻さない
+## Development Guidelines
+- Follow the existing TypeScript and ESLint configuration
+- Use Tailwind CSS for styling, and prefer existing utility classes
+- Add or update Jest tests when adding features or changing behavior
+- Preserve existing responsive design patterns
+- Follow Next.js best practices for SEO and performance
+- Don't revert existing user changes without being asked
 
-## コミット・push のルール
-- コミットメッセージは [Conventional Commits](https://www.conventionalcommits.org/) 形式で書く: `<type>[(scope)]: <subject>`
-  - 主な type: `feat` `fix` `docs` `style` `refactor` `perf` `test` `build` `ci` `chore` `revert`
-  - subject は日本語でよい（例: `fix: OGP画像のパスが正しく解決されない問題を修正`）
-  - 破壊的変更を含む場合は `type!:` または本文に `BREAKING CHANGE:` を付ける
-- push の挙動
-  - feature ブランチへの push は確認なしで実行してよい
-  - `main` への直接 push、および force push（`--force` / `--force-with-lease`）は必ず事前にユーザーへ確認する
-
-## 主要コンポーネント
-- `Layout.tsx` - メインページラッパー
-- `BlogPostList.tsx` - 記事一覧表示
-- `Header.tsx` / `Footer.tsx` - サイトナビゲーション
-- `Share.tsx` - ソーシャル共有機能
-
-## 重要ファイル
-- `src/lib/posts.ts` - ブログ記事解析・管理
-- `src/lib/date.ts` - 日付フォーマットユーティリティ
-- `next.config.js` - Next.js 設定
-- `tailwind.config.js` - Tailwind CSS 設定
+## Commit & Push Rules
+- Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>[(scope)]: <subject>`
+  - Common types: `feat` `fix` `docs` `style` `refactor` `perf` `test` `build` `ci` `chore` `revert`
+  - Write the subject in English (e.g. `fix: resolve incorrect OGP image path`)
+  - For breaking changes, use `type!:` or add `BREAKING CHANGE:` in the body
+- PR titles and descriptions are also written in English
+- Push behavior
+  - Pushing to feature branches can be done without confirmation
+  - Always confirm with the user before pushing directly to `main` or force-pushing (`--force` / `--force-with-lease`)
