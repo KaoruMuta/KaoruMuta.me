@@ -1,3 +1,3 @@
-# Claude Code 開発ガイド
+# Claude Code Development Guide
 
-このプロジェクトの開発ガイドは [AGENTS.md](./AGENTS.md) を参照してください。
+See [AGENTS.md](./AGENTS.md) for this project's development guide.
