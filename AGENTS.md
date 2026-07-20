@@ -39,6 +39,15 @@ Next.js で構築された個人ブログサイト。旅行体験、留学記録
 - SEO・パフォーマンスについて Next.js のベストプラクティスに従う
 - 既存のユーザー変更を勝手に巻き戻さない
 
+## コミット・push のルール
+- コミットメッセージは [Conventional Commits](https://www.conventionalcommits.org/) 形式で書く: `<type>[(scope)]: <subject>`
+  - 主な type: `feat` `fix` `docs` `style` `refactor` `perf` `test` `build` `ci` `chore` `revert`
+  - subject は日本語でよい（例: `fix: OGP画像のパスが正しく解決されない問題を修正`）
+  - 破壊的変更を含む場合は `type!:` または本文に `BREAKING CHANGE:` を付ける
+- push の挙動
+  - feature ブランチへの push は確認なしで実行してよい
+  - `main` への直接 push、および force push（`--force` / `--force-with-lease`）は必ず事前にユーザーへ確認する
+
 ## 主要コンポーネント
 - `Layout.tsx` - メインページラッパー
 - `BlogPostList.tsx` - 記事一覧表示
