@@ -14,7 +14,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 ## Development Commands
 - `bun run dev` - start the dev server (with debugger attached)
 - `bun run build` - production build
-- `bun run lint` - run ESLint
+- `bun run lint` - run oxlint
 - `bun run format` - format code with Prettier
 - `bun run test` - run Jest tests with coverage
 
@@ -31,7 +31,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - Categories are managed via frontmatter tags
 
 ## Development Guidelines
-- Follow the existing TypeScript and ESLint configuration
+- Follow the existing TypeScript and oxlint configuration
 - Use Tailwind CSS for styling, and prefer existing utility classes
 - Add or update Jest tests when adding features or changing behavior
 - Preserve existing responsive design patterns

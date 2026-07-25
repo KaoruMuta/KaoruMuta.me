@@ -77,6 +77,7 @@ const escapeXml = (value) =>
 const charWidth = (char) => {
   if (/\s/.test(char)) return 0.36;
   if (/[._:-]/.test(char)) return 0.36;
+  // oxlint-disable-next-line no-control-regex -- intentional ASCII-range check for glyph width
   if (/[\x00-\x7F]/.test(char)) return 0.72;
   return 1;
 };
