@@ -32,4 +32,4 @@ jobs:
       - name: Format check
         run: bun run format:check
       - name: Execute unittest
-        run: bun test
+        run: bun run test

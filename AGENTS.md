@@ -10,7 +10,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4
 - **Content**: Markdown files with gray-matter frontmatter
-- **Testing**: Jest + Testing Library
+- **Testing**: Vitest + Testing Library
 - **Runtime & package manager**: Node.js + Bun, managed via mise (see `mise.toml` for pinned versions)
 
 ## Development Commands
@@ -20,7 +20,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - `bun run lint` - run oxlint
 - `bun run format` - format code with oxfmt
 - `bun run format:check` - check formatting without writing
-- `bun run test` - run Jest tests with coverage
+- `bun run test` - run Vitest tests with coverage
 
 ## Project Structure
 
@@ -40,7 +40,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 
 - Follow the existing TypeScript and oxlint configuration
 - Use Tailwind CSS for styling, and prefer existing utility classes
-- Add or update Jest tests when adding features or changing behavior
+- Add or update Vitest tests when adding features or changing behavior
 - Preserve existing responsive design patterns
 - Follow Next.js best practices for SEO and performance
 - Don't revert existing user changes without being asked
