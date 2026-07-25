@@ -68,11 +68,7 @@ const findRsvgConvert = () => {
 };
 
 const escapeXml = (value) =>
-  value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;');
+  value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
 const charWidth = (char) => {
   if (/\s/.test(char)) return 0.36;
@@ -173,7 +169,8 @@ const wrapTokens = (tokens, { maxWidth, maxLines, splitLongTokens = false }) => 
           const slack = maxWidth - width;
           const openingPenalty = /[（([｛{【『「]$/.test(safeTokens[end - 1]) ? 80 : 0;
           const singleTokenPenalty = end - start === 1 && n > lineCount ? 18 : 0;
-          const cost = previous.cost + (isLast ? slack * slack * 0.12 : slack * slack) + openingPenalty + singleTokenPenalty;
+          const cost =
+            previous.cost + (isLast ? slack * slack * 0.12 : slack * slack) + openingPenalty + singleTokenPenalty;
 
           if (!dp[line][end] || cost < dp[line][end].cost) {
             dp[line][end] = {
@@ -295,17 +292,7 @@ const svgForTitle = (title) => `<?xml version="1.0" encoding="UTF-8"?>
 const renderImage = ({ title, outputPath, tempDir, rsvgConvert }) => {
   const svgPath = path.join(tempDir, `${path.basename(outputPath, '.png')}.svg`);
   fs.writeFileSync(svgPath, svgForTitle(title));
-  execFileSync(rsvgConvert, [
-    '--format',
-    'png',
-    '--width',
-    '1200',
-    '--height',
-    '630',
-    '--output',
-    outputPath,
-    svgPath,
-  ]);
+  execFileSync(rsvgConvert, ['--format', 'png', '--width', '1200', '--height', '630', '--output', outputPath, svgPath]);
 };
 
 const loadPostFiles = (directory) =>
