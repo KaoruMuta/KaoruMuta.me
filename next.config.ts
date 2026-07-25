@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from 'next';
+
 const isProduction = process.env.NODE_ENV === 'production';
-module.exports = {
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   env: {
     HOST: isProduction ? 'https://kaorumuta.me' : 'http://localhost:3000',
@@ -9,3 +11,5 @@ module.exports = {
     GOOGLE_ADSENSE_SLOT_ID: '1520904619',
   },
 };
+
+export default nextConfig;
