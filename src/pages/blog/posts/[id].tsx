@@ -1,6 +1,37 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Prism from 'prismjs';
+// Load order matters: each language must be imported after the languages it extends.
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-tsx';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-diff';
+import 'prismjs/components/prism-docker';
+import 'prismjs/components/prism-go';
+import 'prismjs/components/prism-graphql';
+import 'prismjs/components/prism-ignore';
+import 'prismjs/components/prism-java';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-markdown';
+import 'prismjs/components/prism-nginx';
+import 'prismjs/components/prism-php';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-regex';
+import 'prismjs/components/prism-ruby';
+import 'prismjs/components/prism-sql';
+import 'prismjs/components/prism-swift';
+import 'prismjs/components/prism-vim';
+import 'prismjs/components/prism-yaml';
+// The show-language plugin requires the toolbar plugin to be loaded first.
+import 'prismjs/plugins/toolbar/prism-toolbar';
+import 'prismjs/plugins/show-language/prism-show-language';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import { useEffect } from 'react';
 import Ads from '../../../components/Ads';
 import Description from '../../../components/Description';

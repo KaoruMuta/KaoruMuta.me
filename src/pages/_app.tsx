@@ -2,6 +2,8 @@ import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/plugins/toolbar/prism-toolbar.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import { useEffect } from 'react';
 import '../styles/globals.css';
 import Layout from '../components/Layout';
