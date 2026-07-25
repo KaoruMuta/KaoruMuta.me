@@ -22,7 +22,6 @@
     "@types/marked": "6.0.0",
     "@types/prismjs": "1.26.6",
     "ansi-regex": "6.2.2",
-    "babel-plugin-prismjs": "2.1.0",
     "gray-matter": "4.0.3",
     "marked": "18.0.7",
     "next": "16.2.11",
