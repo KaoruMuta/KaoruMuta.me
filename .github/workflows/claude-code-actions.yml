@@ -35,6 +35,6 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          assignee_trigger: "claude-bot"
+          assignee_trigger: 'claude-bot'
           claude_args: |
             --allowedTools "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*),Bash(npm run format:*)"

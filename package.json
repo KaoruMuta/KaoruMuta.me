@@ -11,7 +11,8 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "oxlint",
-    "format": "prettier --write **/*.{js,ts,tsx,json,css,md}",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "ogp:generate": "node scripts/generate-ogp.mjs",
     "test": "jest --coverage"
   },
@@ -41,10 +42,9 @@
     "jest": "30.4.2",
     "jest-environment-jsdom": "30.4.1",
     "next-sitemap": "4.2.3",
+    "oxfmt": "^0.60.0",
     "oxlint": "^1.75.0",
     "postcss": "8.5.14",
-    "prettier": "3.8.3",
-    "prettier-plugin-organize-imports": "4.3.0",
     "tailwindcss": "4.1.13",
     "typescript": "6.0.3"
   }

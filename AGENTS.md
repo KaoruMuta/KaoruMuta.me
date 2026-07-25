@@ -1,9 +1,11 @@
 # AGENTS.md
 
 ## Project Overview
+
 A personal blog built with Next.js, covering travel experiences, study-abroad records, and tech book reviews.
 
 ## Tech Stack
+
 - **Framework**: Next.js (Pages Router) + React
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4
@@ -12,13 +14,16 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - **Runtime & package manager**: Node.js + Bun, managed via mise (see `mise.toml` for pinned versions)
 
 ## Development Commands
+
 - `bun run dev` - start the dev server (with debugger attached)
 - `bun run build` - production build
 - `bun run lint` - run oxlint
-- `bun run format` - format code with Prettier
+- `bun run format` - format code with oxfmt
+- `bun run format:check` - check formatting without writing
 - `bun run test` - run Jest tests with coverage
 
 ## Project Structure
+
 - `src/pages/` - Next.js pages and API routes
 - `src/components/` - reusable React components
 - `src/lib/` - utility functions and helpers
@@ -26,11 +31,13 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - `public/posts/` - static assets for blog posts
 
 ## Content Management
+
 - Blog posts are managed as Markdown files with frontmatter metadata
 - Images are stored under `public/posts/`, organized by year
 - Categories are managed via frontmatter tags
 
 ## Development Guidelines
+
 - Follow the existing TypeScript and oxlint configuration
 - Use Tailwind CSS for styling, and prefer existing utility classes
 - Add or update Jest tests when adding features or changing behavior
@@ -39,6 +46,7 @@ A personal blog built with Next.js, covering travel experiences, study-abroad re
 - Don't revert existing user changes without being asked
 
 ## Commit & Push Rules
+
 - Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>[(scope)]: <subject>`
   - Common types: `feat` `fix` `docs` `style` `refactor` `perf` `test` `build` `ci` `chore` `revert`
   - Write the subject in English (e.g. `fix: resolve incorrect OGP image path`)
