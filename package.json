@@ -13,6 +13,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
     "ogp:generate": "node scripts/generate-ogp.mjs",
     "test": "vitest run --coverage"
   },
@@ -22,10 +23,9 @@
     "@types/marked": "6.0.0",
     "@types/prismjs": "1.26.6",
     "ansi-regex": "6.2.2",
-    "babel-plugin-prismjs": "2.1.0",
     "gray-matter": "4.0.3",
     "marked": "18.0.7",
-    "next": "16.2.11",
+    "next": "16.3.0",
     "prismjs": "1.30.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -44,7 +44,7 @@
     "oxlint": "^1.75.0",
     "postcss": "8.5.23",
     "tailwindcss": "4.3.3",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "^4.1.10"
   }
 }
